@@ -34,3 +34,7 @@ Validation: cargo test (10 passed), cargo fmt --check, cargo clippy --locked --a
 - NOT TESTED: Firefox/Edge/Safari, GPU, peak memory, unseen generators, independent thesis data, human-edited AI, domain-shift robustness. DOCX/PDF and report export remain unimplemented.
 - Public deployment of this new model not verified. Commit/push delivers code; Cloudflare must finish deployment before the research UI is visible.
 - TESTED: second independent execution of the same pinned preparation/training commands reproduced byte-identical model weights (`cmp` exit 0) and identical test metrics.
+
+## Simplified practicum interface
+Replaced the marketing hero/sidebar with a single-column report form, plain white background, restrained maroon action, and compact typography. Purpose now explicitly targets Perilaku Organisasi practicum reports, Teknik Industri Universitas Muhammadiyah Malang. No official institutional affiliation is claimed. Model limitations explicitly state that this corpus has not validated UMM practicum reports; weights and thresholds are unchanged. Paragraph previews and detailed model methodology use expandable sections to reduce clutter.
+Validation: 10 Rust unit tests + 1 model integration test, fmt, clippy, release build, existing Chromium upload/error/mobile checks and model/aggregation/CPU checks pass. Desktop 1280px and mobile 390px screenshots inspected. Existing dependency future-compatibility warning remains.

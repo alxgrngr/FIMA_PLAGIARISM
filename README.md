@@ -1,4 +1,6 @@
-# NUSA AI Detector
+# NUSA — Pemeriksaan Laporan Praktikum
+
+Alat bantu pemeriksaan indikasi AI untuk laporan praktikum Perilaku Organisasi, Teknik Industri Universitas Muhammadiyah Malang. Bukan layanan resmi universitas; model belum divalidasi khusus pada laporan praktikum tersebut.
 
 Rust + Leptos CSR / WebAssembly research prototype for Indonesian text. **Experimental detector, not a validated academic tool.** A real trained Indonesian TF-IDF/logistic model is available in opt-in research mode. Internal test accuracy is 94.31% on a narrow Wikipedia–Gemma dataset; this is not a general accuracy guarantee. See docs/MODEL_CARD.md.
 
