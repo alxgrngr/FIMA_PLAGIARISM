@@ -1,3 +1,4 @@
+pub mod documents;
 pub mod model;
 use unicode_normalization::UnicodeNormalization;
 
