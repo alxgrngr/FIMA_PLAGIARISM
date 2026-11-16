@@ -19,3 +19,7 @@ Initial prototype pushed to main at c8107b8. Deterministic TF-IDF/logistic basel
 
 ## Blank deployment investigation
 User screenshot shows NUSA title with blank body. Live fetch is blocked by environment proxy, so root cause is not confirmed. Source root index.html has an empty body and requires Trunk compilation. Added explicit Workers dist-only asset configuration, portable Cloudflare build script and fail-closed compiled asset validator. Build and validator pass locally. No external redeploy performed.
+
+## Rust ML runtime
+Added bounded JSON model loading, schema/coefficient/index validation, TF-IDF and CPU logistic inference matching the Python baseline formula. Unknown-vocabulary input abstains instead of returning bias-only scores. Research models remain disabled in the public UI. Tests use explicit mathematical fixtures, not claimed trained detector weights. Dataset access now works; official SemEval upstream is subject to a DMCA takedown, so its unofficial mirror was not used. No real training/evaluation metrics are claimed.
+Validation: cargo test (10 passed), cargo fmt --check, cargo clippy --locked --all-targets -- -D warnings and Trunk release WASM build pass. Python-export/native Rust inference parity passes on three synthetic fixtures within 1e-12. This does not validate real-data quality, browser inference performance or GPU support. No weights are distributed. Existing proc-macro-error2 future-compatibility warning remains.

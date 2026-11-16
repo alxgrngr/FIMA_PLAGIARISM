@@ -14,3 +14,6 @@ The output directory must not exist. Outputs include model weights, vocabulary/I
 
 ## Evidence and limits
 Five software unit tests pass. Synthetic fixtures are used solely for algorithm/metric/splitting checks and are not evidence of detector accuracy. No real-data training run has occurred. No academic/domain-shift evaluation, confidence intervals, ROC/PR AUC, baseline comparison or production approval exists. Tokenizer intentionally retains ASCII letters only; this must be revisited before multilingual use. At least 15 groups is an execution guard, not an adequate dataset-size claim. Memory is proportional to corpus/vocabulary and dense gradients; benchmark before large datasets.
+
+## Native Rust inference
+`cargo run --locked --example score -- MODEL.json TEXT.txt` loads the research JSON format and returns an uncalibrated score. All-unknown vocabulary abstains. Native Rust math was compared to Python on three synthetic test inputs within 1e-12. This verifies numerical plumbing, not detector quality. The public UI deliberately does not expose loading unvalidated research weights.

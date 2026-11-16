@@ -816,6 +816,8 @@ name = "nusa-ai-detector"
 version = "0.1.0"
 dependencies = [
  "leptos",
+ "serde",
+ "serde_json",
  "unicode-normalization",
  "wasm-bindgen",
  "wasm-bindgen-futures",

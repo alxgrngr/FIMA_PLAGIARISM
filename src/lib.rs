@@ -1,3 +1,4 @@
+pub mod model;
 use unicode_normalization::UnicodeNormalization;
 
 pub const MAX_CHARS: usize = 100_000;
