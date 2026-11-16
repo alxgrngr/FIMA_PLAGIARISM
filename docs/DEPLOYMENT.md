@@ -1,0 +1,3 @@
+# DEPLOYMENT
+
+NOT DEPLOYED. Target Cloudflare Pages Free, static dist directory. First run all CI gates and inspect UI/security headers. Each asset must be <=25 MiB. Create/configure Pages only with owner authorization; upload dist through the official Pages direct-upload interface. No Cloudflare credentials are present or needed for local development. No automated deployment workflow is enabled because authorization and destination are absent. Do not place model artifacts >25 MiB on Pages. A future model host requires explicit license, CORS and checksum checks. Current build is a research prototype, not detector MVP.

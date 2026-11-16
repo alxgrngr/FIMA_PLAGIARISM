@@ -1,0 +1,25 @@
+name: Rust and WASM
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: rustup show
+      - uses: Swatinem/rust-cache@v2
+      - run: cargo fmt --check
+      - run: cargo clippy --locked --all-targets -- -D warnings
+      - run: cargo test --locked
+      - run: cargo install trunk --version 0.21.14 --locked
+      - run: trunk build --release --locked
+      - name: Validate Pages assets
+        run: |
+          test -f dist/index.html
+          test -f dist/_headers
+          python3 -c "from pathlib import Path; files=list(Path('dist').rglob('*')); assert any(p.suffix=='.wasm' for p in files); assert all(p.stat().st_size<=25*1024*1024 for p in files if p.is_file())"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cloudflare-pages
+          path: dist/

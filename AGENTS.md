@@ -1,0 +1,2 @@
+# Project guidance
+Use this existing checkout; do not create worktrees unless requested. Keep Rust/Leptos CSR as the main runtime. Never fabricate detection scores, dataset provenance, or benchmark results. Keep user text local. Never publish or use account credentials without explicit authorization. Run fmt, clippy, tests and release WASM build after relevant changes. Record untested functionality honestly in docs/PROGRESS.md.
