@@ -12,6 +12,7 @@ jobs:
       - run: cargo fmt --check
       - run: cargo clippy --locked --all-targets -- -D warnings
       - run: cargo test --locked
+      - run: python3 -m unittest discover -s training -v
       - run: cargo install trunk --version 0.21.14 --locked
       - run: trunk build --release --locked
       - name: Validate Pages assets

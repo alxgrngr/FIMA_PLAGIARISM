@@ -1,0 +1,41 @@
+name: Deploy Cloudflare Pages (manual)
+on:
+  workflow_dispatch:
+    inputs:
+      project:
+        description: Existing Cloudflare Pages project name
+        required: true
+        type: string
+permissions:
+  contents: read
+jobs:
+  deploy:
+    environment: production
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: rustup show
+      - uses: Swatinem/rust-cache@v2
+      - run: cargo fmt --check
+      - run: cargo clippy --locked --all-targets -- -D warnings
+      - run: cargo test --locked
+      - run: python3 -m unittest discover -s training -v
+      - run: cargo install trunk --version 0.21.14 --locked
+      - run: trunk build --release --locked
+      - name: Check static assets
+        run: |
+          test -f dist/index.html
+          test -f dist/_headers
+          python3 -c "from pathlib import Path; assert all(p.stat().st_size<=25*1024*1024 for p in Path('dist').rglob('*') if p.is_file())"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Deploy authorized project
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          PAGES_PROJECT: ${{ inputs.project }}
+        run: |
+          test -n "$CLOUDFLARE_API_TOKEN"
+          test -n "$CLOUDFLARE_ACCOUNT_ID"
+          npm exec --yes --package=wrangler@4.50.0 -- wrangler pages deploy dist --project-name "$PAGES_PROJECT" --branch main

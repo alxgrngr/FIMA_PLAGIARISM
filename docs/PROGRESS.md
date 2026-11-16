@@ -13,3 +13,6 @@ Initial audit: empty unborn Git branch work; no source, documentation or instruc
 - TESTED: Chromium paste/counts, paragraph display, TXT read, invalid/binary TXT, oversized file, unsupported PDF rejection, clear/empty error and 390px mobile overflow checks. No page errors.
 - Final WASM: 289,673 bytes; JS: 31,067 bytes. All output files below 25 MiB. Runtime latency, peak memory, Firefox/Edge/Safari, GPU and inference NOT TESTED.
 - Overall delivery is partial, not the requested complete detector MVP. Remaining independent work includes DOCX/PDF parsing, reports, statistics expansion, accessibility coverage and model research/training tooling.
+
+## Follow-up: repository push and ML tooling
+Initial prototype pushed to main at c8107b8. Deterministic TF-IDF/logistic baseline pipeline IMPLEMENTED; five pipeline software tests TESTED (synthetic fixtures only). Real-data training remains BLOCKED pending approved, accessible dataset. M4 candidate audited; no explicit license found in inspected repository. Manual Cloudflare deployment workflow IMPLEMENTED, NOT TESTED externally. No Cloudflare credential bindings found in runtime. Network research domain additions saved as draft, not published.

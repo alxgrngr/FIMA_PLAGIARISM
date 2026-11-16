@@ -31,3 +31,6 @@ See docs/MODEL_CARD.md. No model download, inference, calibration, cache, AI per
 
 ## Security and troubleshooting
 File extension is only an initial filter; TXT content rejects NUL and replacement characters. This is conservative and rejects some legitimate Unicode text. Browser `File.text` decodes UTF-8. Limits bound input processing; no unsafe HTML insertion is used. See docs/SECURITY.md. Network restrictions may prevent toolchain or crate downloads; do not disable TLS verification. A missing model is expected and must never be worked around using dummy scores.
+
+## Zero-cost requirement
+Use Cloudflare Pages Free and its included `*.pages.dev` address. No purchased domain, VPS, paid AI API, cloud database or rented GPU is authorized. Provider quotas still apply; never automatically upgrade to a paid plan.
