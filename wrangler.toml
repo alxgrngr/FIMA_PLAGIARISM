@@ -1,0 +1,7 @@
+name = "fima-plagiarism"
+compatibility_date = "2026-11-16"
+
+# Deploy only compiled assets, never the repository root/index.html.
+[assets]
+directory = "./dist"
+not_found_handling = "404-page"

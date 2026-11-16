@@ -4,3 +4,10 @@ NOT DEPLOYED. Target Cloudflare Pages Free, static dist directory. First run all
 
 ## Mandatory zero-cost constraint
 Owner explicitly requires all components to be free, including the domain. Use only the default `<project>.pages.dev` subdomain on Cloudflare Pages Free. Do not purchase/register a custom domain, enable paid features, rent a GPU/VPS, subscribe to a database, or use paid inference APIs. No Workers/Functions are needed. Hosting remains subject to provider free-tier quotas; reaching a quota must stop or defer work, never trigger a paid upgrade. Project name availability and actual URL are confirmed only after authorized deployment. Training must use already available compute without initiating a paid service. Publishing the cloud development environment is separate from publishing this website.
+
+## Existing Workers static-assets deployment
+For the owner's existing `fima-plagiarism` Worker, `wrangler.toml` serves only `dist/`. Repository-root `index.html` is Trunk input, not a runnable website; deploying it directly can produce a title with a blank body.
+
+In Cloudflare Workers Builds settings, use branch `main`, repository root as the build root, build command `bash scripts/cloudflare-build.sh`, and deploy command `npx --yes wrangler@4.50.0 deploy`. The script installs pinned Rust/Trunk when absent, builds, and validates references. First-time tool compilation can consume build time; free-tier limits still apply. Alternatively build through CI and upload compiled dist assets. Never upload the source directory as static output.
+
+The Workers config/build path is tested locally; account deployment and its configured build commands have not been inspected. If a blank page persists after deployment, inspect browser Console and Network for blocked bootstrap CSP, missing JS/WASM, or incorrect MIME types before diagnosing further.

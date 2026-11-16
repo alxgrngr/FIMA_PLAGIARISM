@@ -16,3 +16,6 @@ Initial audit: empty unborn Git branch work; no source, documentation or instruc
 
 ## Follow-up: repository push and ML tooling
 Initial prototype pushed to main at c8107b8. Deterministic TF-IDF/logistic baseline pipeline IMPLEMENTED; five pipeline software tests TESTED (synthetic fixtures only). Real-data training remains BLOCKED pending approved, accessible dataset. M4 candidate audited; no explicit license found in inspected repository. Manual Cloudflare deployment workflow IMPLEMENTED, NOT TESTED externally. No Cloudflare credential bindings found in runtime. Network research domain additions saved as draft, not published.
+
+## Blank deployment investigation
+User screenshot shows NUSA title with blank body. Live fetch is blocked by environment proxy, so root cause is not confirmed. Source root index.html has an empty body and requires Trunk compilation. Added explicit Workers dist-only asset configuration, portable Cloudflare build script and fail-closed compiled asset validator. Build and validator pass locally. No external redeploy performed.
