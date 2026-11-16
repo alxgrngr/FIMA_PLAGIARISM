@@ -1,4 +1,4 @@
-//! CPU-only research inference. No model is enabled in the production UI.
+//! CPU-only research inference. The bundled model is available only in opt-in research mode.
 use serde::Deserialize;
 use std::collections::{BTreeMap, BTreeSet};
 

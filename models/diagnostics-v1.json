@@ -1,0 +1,56 @@
+{
+  "roc_auc": 0.9912619344126193,
+  "average_precision": 0.991411287487895,
+  "ece_10_bins": 0.3163008764831526,
+  "test_near_overlap_with_train_validation_jaccard_08": 0,
+  "by_generator": {
+    "models/gemma-4-26b-a4b-it": {
+      "n": 90,
+      "tp": 83,
+      "fp": 0,
+      "tn": 0,
+      "fn": 7,
+      "accuracy": 0.9222222222222223,
+      "precision": 1.0,
+      "recall": 0.9222222222222223,
+      "f1": 0.9595375722543352,
+      "false_positive_rate": null,
+      "false_negative_rate": 0.07777777777777778,
+      "brier": 0.19536093876556096
+    },
+    "models/gemma-4-31b-it": {
+      "n": 129,
+      "tp": 117,
+      "fp": 0,
+      "tn": 0,
+      "fn": 12,
+      "accuracy": 0.9069767441860465,
+      "precision": 1.0,
+      "recall": 0.9069767441860465,
+      "f1": 0.9512195121951219,
+      "false_positive_rate": null,
+      "false_negative_rate": 0.09302325581395349,
+      "brier": 0.19140977875643408
+    },
+    "publisher-labelled-human": {
+      "n": 220,
+      "tp": 0,
+      "fp": 6,
+      "tn": 214,
+      "fn": 0,
+      "accuracy": 0.9727272727272728,
+      "precision": 0.0,
+      "recall": null,
+      "f1": 0.0,
+      "false_positive_rate": 0.02727272727272727,
+      "false_negative_rate": null,
+      "brier": 0.16293603523763386
+    }
+  },
+  "notes": [
+    "Diagnostic only; no test threshold tuning",
+    "Token-set Jaccard is not a semantic leakage audit",
+    "Wikipedia source and human class are confounded; AI class uses Gemma only",
+    "No independent academic test corpus"
+  ]
+}

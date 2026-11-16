@@ -23,3 +23,14 @@ User screenshot shows NUSA title with blank body. Live fetch is blocked by envir
 ## Rust ML runtime
 Added bounded JSON model loading, schema/coefficient/index validation, TF-IDF and CPU logistic inference matching the Python baseline formula. Unknown-vocabulary input abstains instead of returning bias-only scores. Research models remain disabled in the public UI. Tests use explicit mathematical fixtures, not claimed trained detector weights. Dataset access now works; official SemEval upstream is subject to a DMCA takedown, so its unofficial mirror was not used. No real training/evaluation metrics are claimed.
 Validation: cargo test (10 passed), cargo fmt --check, cargo clippy --locked --all-targets -- -D warnings and Trunk release WASM build pass. Python-export/native Rust inference parity passes on three synthetic fixtures within 1e-12. This does not validate real-data quality, browser inference performance or GPU support. No weights are distributed. Existing proc-macro-error2 future-compatibility warning remains.
+
+## Current result: real model integration (supersedes earlier unavailable status)
+- TESTED: actual topic-grouped training on 2,240 DETECTAI records, 1,348 train / 453 validation / 439 test. 150 disjoint topic groups; no exact normalized duplicates.
+- TESTED: held-out test TP=200, FP=6, TN=214, FN=19; accuracy 94.31%, F1 94.12%, FPR 2.73%. This is an internal Wikipedia/Gemma benchmark, not general academic validity. Poor ECE=0.31630 means scores must not be called calibrated probabilities.
+- IMPLEMENTED/TESTED: opt-in research UI, actual per-paragraph Rust/WASM scores, eligible-word weighted flagged fraction, short/long paragraph exclusions, explicit model limitations and threshold.
+- TESTED: 10 Rust unit tests, 1 bundled-weight native parity integration test, 5 Python pipeline tests, fmt/clippy, release build and artifact size validation.
+- TESTED: Chromium production CSP smoke; real model scores match Python on three held-out corpus records and two committed handwritten numerical fixtures. WebGPU disabled; no external requests. Mixed-paragraph aggregation and exclusion checks pass. The fixtures do not constitute quality evaluation.
+- Observed browser click-to-result times 47–125 ms for small cases include test automation and rendering; not an inference-only benchmark. Model JSON 587,114 bytes; production WASM 932,284 bytes. Every deployment file <25 MiB.
+- NOT TESTED: Firefox/Edge/Safari, GPU, peak memory, unseen generators, independent thesis data, human-edited AI, domain-shift robustness. DOCX/PDF and report export remain unimplemented.
+- Public deployment of this new model not verified. Commit/push delivers code; Cloudflare must finish deployment before the research UI is visible.
+- TESTED: second independent execution of the same pinned preparation/training commands reproduced byte-identical model weights (`cmp` exit 0) and identical test metrics.

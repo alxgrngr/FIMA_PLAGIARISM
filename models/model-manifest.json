@@ -1,1 +1,22 @@
-{"schema_version":1,"status":"unavailable","model":null,"reason":"No licensed, evaluated Indonesian detector integrated. No scores are generated."}
+{
+  "schema_version": 1,
+  "status": "research_only",
+  "model_id": "detectai-topic-v1",
+  "architecture": "TF-IDF + logistic regression",
+  "language": "id",
+  "sha256": "1218bb83f288e3b57a86623703e15ae2bef110042b433c8c0ff56e7feaff3609",
+  "bytes": 587114,
+  "threshold": 0.47677173837318837,
+  "calibrated": false,
+  "dataset": "shouwiku/detectai-indonesian",
+  "dataset_revision": "7ba07fffc32ec81b0d6e660a1ebfea9ec9400fc0",
+  "dataset_license": "MIT declared in publisher dataset card; Wikipedia source attribution retained",
+  "runtime": "Rust CPU/WASM",
+  "limitations": [
+    "Research-only opt-in",
+    "Wikipedia vs Gemma source confound",
+    "Not validated for academic misconduct decisions",
+    "No ChatGPT/domain-shift evaluation",
+    "No calibrated authorship probability"
+  ]
+}
