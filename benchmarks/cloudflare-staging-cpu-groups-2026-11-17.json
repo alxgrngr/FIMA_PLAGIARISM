@@ -1,0 +1,222 @@
+{
+  "worker": "nusa-receipts-staging",
+  "since": "2026-11-17T00:00:00+00:00",
+  "cpu_unit": "microseconds",
+  "groups": [
+    {
+      "dimensions": {
+        "datetime": "2026-11-17T05:11:10Z",
+        "httpResponseStatus": 200,
+        "status": "success"
+      },
+      "quantiles": {
+        "cpuTimeP50": 3647,
+        "cpuTimeP99": 4809
+      },
+      "sum": {
+        "errors": 0,
+        "requests": 2
+      }
+    },
+    {
+      "dimensions": {
+        "datetime": "2026-11-17T05:11:12Z",
+        "httpResponseStatus": 401,
+        "status": "success"
+      },
+      "quantiles": {
+        "cpuTimeP50": 1490,
+        "cpuTimeP99": 1490
+      },
+      "sum": {
+        "errors": 0,
+        "requests": 1
+      }
+    },
+    {
+      "dimensions": {
+        "datetime": "2026-11-17T05:11:12Z",
+        "httpResponseStatus": 200,
+        "status": "success"
+      },
+      "quantiles": {
+        "cpuTimeP50": 1000,
+        "cpuTimeP99": 12808
+      },
+      "sum": {
+        "errors": 0,
+        "requests": 2
+      }
+    },
+    {
+      "dimensions": {
+        "datetime": "2026-11-17T05:11:11Z",
+        "httpResponseStatus": 403,
+        "status": "success"
+      },
+      "quantiles": {
+        "cpuTimeP50": 1922,
+        "cpuTimeP99": 1922
+      },
+      "sum": {
+        "errors": 0,
+        "requests": 1
+      }
+    },
+    {
+      "dimensions": {
+        "datetime": "2026-11-17T05:11:48Z",
+        "httpResponseStatus": 201,
+        "status": "success"
+      },
+      "quantiles": {
+        "cpuTimeP50": 72104,
+        "cpuTimeP99": 72104
+      },
+      "sum": {
+        "errors": 0,
+        "requests": 1
+      }
+    },
+    {
+      "dimensions": {
+        "datetime": "2026-11-17T05:11:46Z",
+        "httpResponseStatus": 201,
+        "status": "success"
+      },
+      "quantiles": {
+        "cpuTimeP50": 61066,
+        "cpuTimeP99": 61066
+      },
+      "sum": {
+        "errors": 0,
+        "requests": 1
+      }
+    },
+    {
+      "dimensions": {
+        "datetime": "2026-11-17T05:11:09Z",
+        "httpResponseStatus": 200,
+        "status": "success"
+      },
+      "quantiles": {
+        "cpuTimeP50": 5425,
+        "cpuTimeP99": 5425
+      },
+      "sum": {
+        "errors": 0,
+        "requests": 1
+      }
+    },
+    {
+      "dimensions": {
+        "datetime": "2026-11-17T05:11:11Z",
+        "httpResponseStatus": 200,
+        "status": "success"
+      },
+      "quantiles": {
+        "cpuTimeP50": 22103,
+        "cpuTimeP99": 37970
+      },
+      "sum": {
+        "errors": 0,
+        "requests": 2
+      }
+    },
+    {
+      "dimensions": {
+        "datetime": "2026-11-17T05:11:12Z",
+        "httpResponseStatus": 201,
+        "status": "success"
+      },
+      "quantiles": {
+        "cpuTimeP50": 2837,
+        "cpuTimeP99": 2837
+      },
+      "sum": {
+        "errors": 0,
+        "requests": 1
+      }
+    },
+    {
+      "dimensions": {
+        "datetime": "2026-11-17T05:11:09Z",
+        "httpResponseStatus": 401,
+        "status": "success"
+      },
+      "quantiles": {
+        "cpuTimeP50": 986,
+        "cpuTimeP99": 986
+      },
+      "sum": {
+        "errors": 0,
+        "requests": 1
+      }
+    },
+    {
+      "dimensions": {
+        "datetime": "2026-11-17T05:11:11Z",
+        "httpResponseStatus": 201,
+        "status": "success"
+      },
+      "quantiles": {
+        "cpuTimeP50": 8970,
+        "cpuTimeP99": 8970
+      },
+      "sum": {
+        "errors": 0,
+        "requests": 1
+      }
+    },
+    {
+      "dimensions": {
+        "datetime": "2026-11-17T05:11:46Z",
+        "httpResponseStatus": 200,
+        "status": "success"
+      },
+      "quantiles": {
+        "cpuTimeP50": 4397,
+        "cpuTimeP99": 4397
+      },
+      "sum": {
+        "errors": 0,
+        "requests": 1
+      }
+    },
+    {
+      "dimensions": {
+        "datetime": "2026-11-17T05:11:11Z",
+        "httpResponseStatus": 400,
+        "status": "success"
+      },
+      "quantiles": {
+        "cpuTimeP50": 1576,
+        "cpuTimeP99": 1576
+      },
+      "sum": {
+        "errors": 0,
+        "requests": 1
+      }
+    },
+    {
+      "dimensions": {
+        "datetime": "2026-11-17T05:11:10Z",
+        "httpResponseStatus": 401,
+        "status": "success"
+      },
+      "quantiles": {
+        "cpuTimeP50": 998,
+        "cpuTimeP99": 998
+      },
+      "sum": {
+        "errors": 0,
+        "requests": 1
+      }
+    }
+  ],
+  "limitations": [
+    "Adaptive analytics; groups are not guaranteed to represent individual requests.",
+    "No URL paths: HTTP 201 identifies receipt issuance in this Worker version.",
+    "Results may lag; up to 1000 groups. Not a load test or automatic deployment approval."
+  ]
+}
