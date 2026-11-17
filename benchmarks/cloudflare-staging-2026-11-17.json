@@ -1,0 +1,22 @@
+{
+  "worker": "nusa-receipts-staging",
+  "window_start_utc": "2026-11-17T00:00:00Z",
+  "requests": 17,
+  "errors": 0,
+  "cpu_p50_microseconds": 4397,
+  "cpu_p99_microseconds": 72104,
+  "source": "Cloudflare GraphQL workersInvocationsAdaptive",
+  "units_verified": "AccountWorkersInvocationsAdaptiveQuantiles schema descriptions",
+  "functional_checks": {
+    "login_and_receipt_api_suite": "passed remotely",
+    "text_98956_bytes": "201; signed receipt persisted",
+    "docx_10485760_bytes": "signed receipt persisted, confirmed through D1 read-only query"
+  },
+  "limitations": [
+    "Small staging sample, not a load test",
+    "Aggregate CPU metrics do not identify the expensive route",
+    "Zero errors does not demonstrate sustained compliance with the 10ms Free CPU budget",
+    "performance.now returned zero for a remote synchronous inference measurement and cannot establish billed CPU"
+  ],
+  "production_activation": "blocked pending CPU-budget compliance"
+}

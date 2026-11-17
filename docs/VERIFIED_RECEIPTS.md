@@ -44,3 +44,6 @@ The existing root wrangler.toml and static build remain the default, so pushing 
 
 ### Provisioning update — 2026-11-17
 Cloudflare API access now works. Staging database/Worker `nusa-receipts-staging` exists with schema, synthetic accounts and a Cloudflare-managed signing secret. Production D1/real roster activation has NOT occurred. Staging configuration and synthetic IDs are in ignored private files. Main Worker is untouched. To continue, apply/publish the saved environment network additions for `nusa-receipts-staging.fiqihh413.workers.dev` and `fima-plagiarism.fiqihh413.workers.dev`; then run the remote staging tests and obtain actual CPU-limit evidence before any production switch. The published staging address alone does not establish that issuance works within Free CPU limits.
+
+### Free-tier gate result
+Remote functional tests now pass, including 10 MiB DOCX issuance. However Cloudflare's actual aggregate CPU metrics include p99 ~72.1ms against the intended 10ms budget (17 requests, zero errors). That does not establish stable Free-tier operation. The production switch remains blocked on CPU engineering/validation rather than credentials or network. See benchmarks/cloudflare-staging-2026-11-17.json. No paid plan activated and no production roster uploaded.
