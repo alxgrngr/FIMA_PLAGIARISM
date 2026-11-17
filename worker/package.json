@@ -1,0 +1,1 @@
+{"name":"nusa-receipt-worker","private":true,"type":"module","scripts":{"dev":"wrangler dev --local --port 8787","migrate":"wrangler d1 migrations apply DB --local"},"dependencies":{"qrcode":"1.5.4"},"devDependencies":{"wrangler":"4.50.0"}}

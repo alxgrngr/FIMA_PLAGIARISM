@@ -36,3 +36,6 @@ File extension is only an initial filter; DOCX requires ZIP structure, content-t
 
 ## Zero-cost requirement
 Use Cloudflare Pages Free and its included `*.pages.dev` address. No purchased domain, VPS, paid AI API, cloud database or rented GPU is authorized. Provider quotas still apply; never automatically upgrade to a paid plan.
+
+## NIM login and verifiable receipts (not activated on the live site)
+An optional `verified-receipts` frontend and separate Worker/D1 backend are implemented and locally tested. They temporarily send the original file for server-side Rust inference only after consent, then store signed result metadata rather than the document. QR verification detects altered receipt records; screenshots themselves remain editable. The selected roster contains 21 students from sheet 6 and one test account from sheet 7. Roster data and secrets are excluded from Git. See docs/VERIFIED_RECEIPTS.md for setup, security boundaries and Free-tier CPU constraints. Root static deployment stays unchanged until D1 provisioning and actual Free-tier CPU validation are complete.

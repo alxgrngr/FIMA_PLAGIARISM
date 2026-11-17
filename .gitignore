@@ -3,3 +3,9 @@
 __pycache__/
 /training/runs/
 /datasets/local/
+/private/
+/worker/.dev.vars
+/worker/.wrangler/
+/worker/node_modules/
+/worker/pkg/
+/worker/core/target/

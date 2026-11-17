@@ -96,3 +96,4 @@ input[type=checkbox] { accent-color: #195887; }
  .editor, .results, .research { padding: 16px; }
  input[type=file] { padding: 10px; }
 }
+.login-page{max-width:440px;margin:12vh auto;background:white;border:1px solid #b8cddd;border-top:4px solid #195887;padding:28px}.login-page input[type=text]{width:100%;padding:12px;font:inherit;border:1px solid #9eb7cb;border-radius:3px}.login-page button{width:100%}.session-bar{display:flex;justify-content:space-between;gap:16px;align-items:center;max-width:1040px;margin:12px auto;padding:10px 16px;background:#dfeaf3;font-size:13px}.receipt-link{display:inline-block;margin-top:12px;font-weight:bold}button:disabled{opacity:.6;cursor:wait}@media(max-width:520px){.login-page{margin:32px auto;padding:20px}.session-bar{margin:8px 14px;flex-wrap:wrap}}
