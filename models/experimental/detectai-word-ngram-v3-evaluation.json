@@ -1,0 +1,364 @@
+{
+  "dataset_sha256": "1c0365e1456f83856cba81a3daec54addc0344096d0a069a5ad70d52ab1b3aba",
+  "selected": {
+    "features": "word",
+    "C": 10.0,
+    "threshold": 0.36284127847182956,
+    "feature_count": 12000
+  },
+  "paragraph_counts": [
+    2587,
+    909,
+    836
+  ],
+  "validation_trials": [
+    {
+      "features": "word",
+      "C": 1.0,
+      "validation": {
+        "n": 909,
+        "tp": 511,
+        "fp": 18,
+        "tn": 350,
+        "fn": 30,
+        "accuracy": 0.9471947194719472,
+        "precision": 0.9659735349716446,
+        "recall": 0.944547134935305,
+        "f1": 0.9551401869158879,
+        "false_positive_rate": 0.04891304347826087,
+        "false_negative_rate": 0.05545286506469501,
+        "brier": 0.07897369711228237,
+        "threshold": 0.47937938994497226,
+        "eligible_paragraphs": 909,
+        "abstained_human": 0,
+        "abstained_ai": 0
+      }
+    },
+    {
+      "features": "word",
+      "C": 10.0,
+      "validation": {
+        "n": 909,
+        "tp": 521,
+        "fp": 18,
+        "tn": 350,
+        "fn": 20,
+        "accuracy": 0.9581958195819582,
+        "precision": 0.9666048237476809,
+        "recall": 0.9630314232902033,
+        "f1": 0.9648148148148148,
+        "false_positive_rate": 0.04891304347826087,
+        "false_negative_rate": 0.036968576709796676,
+        "brier": 0.04654422476493692,
+        "threshold": 0.36284127847182956,
+        "eligible_paragraphs": 909,
+        "abstained_human": 0,
+        "abstained_ai": 0
+      }
+    },
+    {
+      "features": "word",
+      "C": 30.0,
+      "validation": {
+        "n": 909,
+        "tp": 521,
+        "fp": 18,
+        "tn": 350,
+        "fn": 20,
+        "accuracy": 0.9581958195819582,
+        "precision": 0.9666048237476809,
+        "recall": 0.9630314232902033,
+        "f1": 0.9648148148148148,
+        "false_positive_rate": 0.04891304347826087,
+        "false_negative_rate": 0.036968576709796676,
+        "brier": 0.04322265042481113,
+        "threshold": 0.3099279833793465,
+        "eligible_paragraphs": 909,
+        "abstained_human": 0,
+        "abstained_ai": 0
+      }
+    },
+    {
+      "features": "character",
+      "C": 1.0,
+      "validation": {
+        "n": 909,
+        "tp": 500,
+        "fp": 18,
+        "tn": 350,
+        "fn": 41,
+        "accuracy": 0.935093509350935,
+        "precision": 0.9652509652509652,
+        "recall": 0.9242144177449169,
+        "f1": 0.9442870632672332,
+        "false_positive_rate": 0.04891304347826087,
+        "false_negative_rate": 0.07578558225508318,
+        "brier": 0.07019060351749527,
+        "threshold": 0.528184428241061,
+        "eligible_paragraphs": 909,
+        "abstained_human": 0,
+        "abstained_ai": 0
+      }
+    },
+    {
+      "features": "character",
+      "C": 10.0,
+      "validation": {
+        "n": 909,
+        "tp": 510,
+        "fp": 18,
+        "tn": 350,
+        "fn": 31,
+        "accuracy": 0.9460946094609461,
+        "precision": 0.9659090909090909,
+        "recall": 0.9426987060998152,
+        "f1": 0.9541627689429373,
+        "false_positive_rate": 0.04891304347826087,
+        "false_negative_rate": 0.05730129390018484,
+        "brier": 0.04764243253233471,
+        "threshold": 0.4681152844826706,
+        "eligible_paragraphs": 909,
+        "abstained_human": 0,
+        "abstained_ai": 0
+      }
+    },
+    {
+      "features": "character",
+      "C": 30.0,
+      "validation": {
+        "n": 909,
+        "tp": 513,
+        "fp": 18,
+        "tn": 350,
+        "fn": 28,
+        "accuracy": 0.9493949394939494,
+        "precision": 0.9661016949152542,
+        "recall": 0.9482439926062847,
+        "f1": 0.957089552238806,
+        "false_positive_rate": 0.04891304347826087,
+        "false_negative_rate": 0.051756007393715345,
+        "brier": 0.04647893245986543,
+        "threshold": 0.41462474697680873,
+        "eligible_paragraphs": 909,
+        "abstained_human": 0,
+        "abstained_ai": 0
+      }
+    },
+    {
+      "features": "combined",
+      "C": 1.0,
+      "validation": {
+        "n": 909,
+        "tp": 508,
+        "fp": 18,
+        "tn": 350,
+        "fn": 33,
+        "accuracy": 0.9438943894389439,
+        "precision": 0.9657794676806084,
+        "recall": 0.9390018484288355,
+        "f1": 0.9522024367385192,
+        "false_positive_rate": 0.04891304347826087,
+        "false_negative_rate": 0.06099815157116451,
+        "brier": 0.058568829770857665,
+        "threshold": 0.47728404116228124,
+        "eligible_paragraphs": 909,
+        "abstained_human": 0,
+        "abstained_ai": 0
+      }
+    },
+    {
+      "features": "combined",
+      "C": 10.0,
+      "validation": {
+        "n": 909,
+        "tp": 519,
+        "fp": 18,
+        "tn": 350,
+        "fn": 22,
+        "accuracy": 0.9559955995599559,
+        "precision": 0.9664804469273743,
+        "recall": 0.9593345656192237,
+        "f1": 0.9628942486085343,
+        "false_positive_rate": 0.04891304347826087,
+        "false_negative_rate": 0.04066543438077634,
+        "brier": 0.042340815887228794,
+        "threshold": 0.3582386962817368,
+        "eligible_paragraphs": 909,
+        "abstained_human": 0,
+        "abstained_ai": 0
+      }
+    },
+    {
+      "features": "combined",
+      "C": 30.0,
+      "validation": {
+        "n": 909,
+        "tp": 518,
+        "fp": 18,
+        "tn": 350,
+        "fn": 23,
+        "accuracy": 0.9548954895489549,
+        "precision": 0.9664179104477612,
+        "recall": 0.9574861367837338,
+        "f1": 0.9619312906220984,
+        "false_positive_rate": 0.04891304347826087,
+        "false_negative_rate": 0.04251386321626617,
+        "brier": 0.04111628923869975,
+        "threshold": 0.3042465647592403,
+        "eligible_paragraphs": 909,
+        "abstained_human": 0,
+        "abstained_ai": 0
+      }
+    }
+  ],
+  "internal_test": {
+    "live": {
+      "n": 836,
+      "tp": 358,
+      "fp": 16,
+      "tn": 375,
+      "fn": 87,
+      "accuracy": 0.8767942583732058,
+      "precision": 0.9572192513368984,
+      "recall": 0.8044943820224719,
+      "f1": 0.8742368742368742,
+      "false_positive_rate": 0.04092071611253197,
+      "false_negative_rate": 0.19550561797752808,
+      "brier": 0.19923830484298927,
+      "threshold": 0.47677173837318837,
+      "eligible_paragraphs": 836,
+      "abstained_human": 0,
+      "abstained_ai": 0
+    },
+    "paragraph_v2": {
+      "n": 836,
+      "tp": 401,
+      "fp": 22,
+      "tn": 369,
+      "fn": 44,
+      "accuracy": 0.9210526315789473,
+      "precision": 0.9479905437352246,
+      "recall": 0.9011235955056179,
+      "f1": 0.923963133640553,
+      "false_positive_rate": 0.056265984654731455,
+      "false_negative_rate": 0.09887640449438202,
+      "brier": 0.06340044603931491,
+      "threshold": 0.34339895973232265,
+      "eligible_paragraphs": 836,
+      "abstained_human": 0,
+      "abstained_ai": 0
+    },
+    "candidate": {
+      "n": 836,
+      "tp": 416,
+      "fp": 23,
+      "tn": 368,
+      "fn": 29,
+      "accuracy": 0.937799043062201,
+      "precision": 0.9476082004555809,
+      "recall": 0.9348314606741573,
+      "f1": 0.9411764705882353,
+      "false_positive_rate": 0.058823529411764705,
+      "false_negative_rate": 0.0651685393258427,
+      "brier": 0.0591152440360273,
+      "threshold": 0.36284127847182956,
+      "eligible_paragraphs": 836,
+      "abstained_human": 0,
+      "abstained_ai": 0
+    }
+  },
+  "ai_stress_test": {
+    "Qwen2.5-0.5B-Instruct@9217f5db79a29953eb74d5343926648285ec7e67": {
+      "generated_examples": 12,
+      "eligible_paragraphs": 16,
+      "candidate_flagged": 4,
+      "candidate_abstained": 0,
+      "live": {
+        "flagged": 2,
+        "abstained": 0
+      },
+      "paragraph_v2": {
+        "flagged": 5,
+        "abstained": 0
+      }
+    },
+    "Llama-3.2-1B-Instruct@067b946cf014b7c697f3654f621d577a3e3afd1c": {
+      "generated_examples": 12,
+      "eligible_paragraphs": 12,
+      "candidate_flagged": 4,
+      "candidate_abstained": 0,
+      "live": {
+        "flagged": 2,
+        "abstained": 0
+      },
+      "paragraph_v2": {
+        "flagged": 2,
+        "abstained": 0
+      }
+    }
+  },
+  "domain_test": null,
+  "limitations": [
+    "Uncalibrated scores. Internal test revisits the Wikipedia/Gemma dataset.",
+    "AI-only stress test cannot estimate a false-positive rate on student reports.",
+    "Experimental Python model, not bundled in production.",
+    "No independent domain test with human-authored reports was supplied.",
+    "Only 12 shared prompts, small quantized generators and an AI-only stress set. No estimates for ChatGPT, edited or mixed authorship, or judgments about UMM students."
+  ],
+  "ai_stress_test_sha256": "56ea5af696af92bbd9dd547a5e8c1a0da823991a58f2d08aa3f99c00dfab09d8",
+  "generation": {
+    "runtime": "node-llama-cpp@3.22.3, CPU, temperature 0.5, seed 1029 through 1040, 220 token cap",
+    "prompt_source": "training/generate_stress.mjs",
+    "screening": "Reviewed outputs for Indonesian, topical relevance and prompt copying before scoring. No student records were used. Same 12 prompts for each generator.",
+    "models": [
+      {
+        "source": "Qwen2.5-0.5B-Instruct@9217f5db79a29953eb74d5343926648285ec7e67",
+        "repository": "Qwen/Qwen2.5-0.5B-Instruct-GGUF",
+        "file": "qwen2.5-0.5b-instruct-q4_k_m.gguf",
+        "gguf_sha256": "74a4da8c9fdbcd15bd1f6d01d621410d31c6fc00986f5eb687824e7b93d7a9db",
+        "accepted_prompt_numbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      {
+        "source": "Llama-3.2-1B-Instruct@067b946cf014b7c697f3654f621d577a3e3afd1c",
+        "repository": "bartowski/Llama-3.2-1B-Instruct-GGUF",
+        "file": "Llama-3.2-1B-Instruct-Q4_K_M.gguf",
+        "gguf_sha256": "6f85a640a97cf2bf5b8e764087b1e83da0fdb51d7c9fab7d0fece9385611df83",
+        "accepted_prompt_numbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      {
+        "source": "SmolLM2-360M-Instruct@7be6f65f1db715fe5dc5a4634c0d459b4eed42ec",
+        "repository": "bartowski/SmolLM2-360M-Instruct-GGUF",
+        "file": "SmolLM2-360M-Instruct-Q4_K_M.gguf",
+        "gguf_sha256": "2fa3f013dcdd7b99f9b237717fa0b12d75bbb89984cc1274be1471a465bac9c2",
+        "accepted_prompt_numbers": [],
+        "exclusion": "Excluded the generator\u2019s batch after reviewing relevance and prompt echo. No model scores were calculated for this batch."
+      }
+    ]
+  }
+}

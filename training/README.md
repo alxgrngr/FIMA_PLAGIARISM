@@ -39,3 +39,21 @@ The runner splits by topic before extracting paragraphs and discards exact norma
 The trained candidate and its aggregate report are in `models/experimental/`. On 836 held-out paragraphs the candidate caught 401/445 AI-labelled paragraphs versus 358/445 for the live model, while incorrectly flagging 22/391 human-labelled paragraphs versus 16/391. The candidate is more sensitive on this test and more often flagged human paragraphs incorrectly at its chosen threshold. The deployed model is still topic-v1.
 
 To check suitability for Perilaku Organisasi, add `--domain-test datasets/local/praktikum-test.jsonl` and choose a fresh output folder. The file uses the same input fields as above. Use consented, anonymized student text with verified authorship and AI samples from multiple tools answering comparable prompts. Keep each prompt or assignment and related versions together. The optional test file stays local and is evaluated only after training. Use a separate set for any later model tuning. Review false positives on held-out human reports, recall across generators, and the number of paragraphs excluded before choosing a production model.
+
+## Word and character experiment with independent generators
+
+Python 3.12 and `training/requirements-candidate.txt` also support this CPU experiment. After preparing the pinned corpus above, run:
+
+```powershell
+.\.venv\Scripts\python.exe training/robust_candidate.py datasets/local/prepared.jsonl --out training/runs/word-ngram-v3
+```
+
+The script compares word unigrams and bigrams, character n-grams, and their combination. It selects the classifier and decision threshold on the validation split before reading any independent test. The model file is a local scikit-learn artifact. Only load Joblib files from training runs you trust. This is a laptop experiment and isn't loaded by the website.
+
+To reproduce the AI-only test, install Node.js 20 or newer and use `npm install --prefix training/runs/llama node-llama-cpp@3.22.3`. Download the Q4_K_M GGUF directly from a model repository listed in the evaluation report's `generation` metadata. Run the following with the actual file path and exact source string from the report:
+
+```powershell
+node training/generate_stress.mjs training/runs/llama path/to/weights.gguf "GENERATOR@REVISION" datasets/local/stress-one.jsonl
+```
+
+Review the generated responses for language, topic and prompt echo before combining them into a single UTF-8 JSONL file. Then rerun the experiment with a fresh output directory and `--ai-stress-test datasets/local/stress-reviewed.jsonl`. Sampled outputs can differ between platforms; keep model hashes, generator versions, prompts and accepted sample IDs with any results. Use `--domain-test datasets/local/praktikum-test.jsonl` to also measure false positives on independently reviewed Bahasa Indonesia reports and AI examples. Related versions must share group IDs, with distinct groups across development and test. The training command does not send reports to a service.

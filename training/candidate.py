@@ -114,6 +114,18 @@ def compare(rows, baseline, candidate):
             for label, model in (("live", baseline), ("candidate", candidate))}
 
 
+def independent_paragraphs(path, development_documents, development_paragraphs):
+    documents = load(path)
+    if {r["group"] for r in documents} & {r["group"] for r in development_documents}:
+        raise ValueError("Independent test data must not reuse development group IDs.")
+    independent = list(paragraphs(documents))
+    originals = {tuple(tokens(row["text"])) for row in development_paragraphs}
+    if any(tuple(tokens(row["text"])) in originals for row in independent):
+        raise ValueError("Paragraph overlap between development and the independent test.")
+    cleaned, = deduplicate([independent])
+    return cleaned
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("dataset", type=Path)
@@ -142,14 +154,9 @@ def main():
         "domain_test": None,
     }
     if args.domain_test:
-        domain = load(args.domain_test)
-        if {r["group"] for r in domain} & {r["group"] for r in documents}:
-            raise ValueError("Independent test data must not reuse development group IDs.")
-        domain_paragraphs = list(paragraphs(domain))
-        originals = {tuple(tokens(row["text"])) for part in parts for row in part}
-        if any(tuple(tokens(row["text"])) in originals for row in domain_paragraphs):
-            raise ValueError("Paragraph overlap between development and the independent test.")
-        domain_paragraphs, = deduplicate([domain_paragraphs])
+        domain_paragraphs = independent_paragraphs(
+            args.domain_test, documents, (r for part in parts for r in part),
+        )
         report["domain_test"] = compare(domain_paragraphs, baseline, model)
         report["domain_test_sha256"] = hashlib.sha256(args.domain_test.read_bytes()).hexdigest()
     data = json.dumps(model, sort_keys=True, separators=(",", ":")).encode()
