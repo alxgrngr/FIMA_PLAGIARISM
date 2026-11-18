@@ -1,0 +1,162 @@
+{
+  "worker": "nusa-receipts-staging",
+  "version": "a3665d3e-ba74-4076-82ad-ab8cd1fc339f",
+  "source": "Cloudflare GraphQL workersInvocationsAdaptive grouped by timestamp and HTTP status",
+  "method": "Serial synthetic requests matched by UTC seconds and status. Small sample, no concurrency test. Null means no unique analytics group was available.",
+  "calls": [
+    {
+      "label": "login",
+      "start": "2026-11-18T22:03:13.781Z",
+      "end": "2026-11-18T22:03:14.783Z",
+      "status": 200,
+      "cpu_microseconds": 3985
+    },
+    {
+      "label": "short.txt",
+      "start": "2026-11-18T22:03:15.937Z",
+      "end": "2026-11-18T22:03:16.306Z",
+      "status": 201,
+      "cpu_microseconds": 8710
+    },
+    {
+      "label": "verify short.txt",
+      "start": "2026-11-18T22:03:17.458Z",
+      "end": "2026-11-18T22:03:17.677Z",
+      "status": 200,
+      "cpu_microseconds": 28821
+    },
+    {
+      "label": "long.txt",
+      "start": "2026-11-18T22:03:18.830Z",
+      "end": "2026-11-18T22:03:19.164Z",
+      "status": 201,
+      "cpu_microseconds": 16313
+    },
+    {
+      "label": "verify long.txt",
+      "start": "2026-11-18T22:03:20.317Z",
+      "end": "2026-11-18T22:03:20.556Z",
+      "status": 200,
+      "cpu_microseconds": 21872
+    },
+    {
+      "label": "boundary.docx",
+      "start": "2026-11-18T22:03:21.706Z",
+      "end": "2026-11-18T22:03:23.731Z",
+      "status": 201,
+      "cpu_microseconds": 117210
+    },
+    {
+      "label": "verify boundary.docx",
+      "start": "2026-11-18T22:03:24.883Z",
+      "end": "2026-11-18T22:03:25.015Z",
+      "status": 200,
+      "cpu_microseconds": 13459
+    },
+    {
+      "label": "login",
+      "start": "2026-11-18T22:03:26.174Z",
+      "end": "2026-11-18T22:03:26.431Z",
+      "status": 200,
+      "cpu_microseconds": 2877
+    },
+    {
+      "label": "short.txt",
+      "start": "2026-11-18T22:03:27.584Z",
+      "end": "2026-11-18T22:03:27.812Z",
+      "status": 201,
+      "cpu_microseconds": 3249
+    },
+    {
+      "label": "verify short.txt",
+      "start": "2026-11-18T22:03:28.963Z",
+      "end": "2026-11-18T22:03:29.113Z",
+      "status": 200,
+      "cpu_microseconds": 14553
+    },
+    {
+      "label": "long.txt",
+      "start": "2026-11-18T22:03:30.264Z",
+      "end": "2026-11-18T22:03:30.524Z",
+      "status": 201,
+      "cpu_microseconds": 7031
+    },
+    {
+      "label": "verify long.txt",
+      "start": "2026-11-18T22:03:31.675Z",
+      "end": "2026-11-18T22:03:31.780Z",
+      "status": 200,
+      "cpu_microseconds": 4775
+    },
+    {
+      "label": "boundary.docx",
+      "start": "2026-11-18T22:03:32.934Z",
+      "end": "2026-11-18T22:03:34.673Z",
+      "status": 201,
+      "cpu_microseconds": 56334
+    },
+    {
+      "label": "verify boundary.docx",
+      "start": "2026-11-18T22:03:35.824Z",
+      "end": "2026-11-18T22:03:35.960Z",
+      "status": 200,
+      "cpu_microseconds": null
+    },
+    {
+      "label": "login",
+      "start": "2026-11-18T22:03:37.128Z",
+      "end": "2026-11-18T22:03:37.333Z",
+      "status": 200,
+      "cpu_microseconds": 14320
+    },
+    {
+      "label": "short.txt",
+      "start": "2026-11-18T22:03:38.484Z",
+      "end": "2026-11-18T22:03:38.681Z",
+      "status": 201,
+      "cpu_microseconds": 1947
+    },
+    {
+      "label": "verify short.txt",
+      "start": "2026-11-18T22:03:39.832Z",
+      "end": "2026-11-18T22:03:39.951Z",
+      "status": 200,
+      "cpu_microseconds": 11405
+    },
+    {
+      "label": "long.txt",
+      "start": "2026-11-18T22:03:41.102Z",
+      "end": "2026-11-18T22:03:41.351Z",
+      "status": 201,
+      "cpu_microseconds": 8089
+    },
+    {
+      "label": "verify long.txt",
+      "start": "2026-11-18T22:03:42.502Z",
+      "end": "2026-11-18T22:03:42.696Z",
+      "status": 200,
+      "cpu_microseconds": 5313
+    },
+    {
+      "label": "boundary.docx",
+      "start": "2026-11-18T22:03:43.848Z",
+      "end": "2026-11-18T22:03:45.780Z",
+      "status": 201,
+      "cpu_microseconds": 69877
+    },
+    {
+      "label": "verify boundary.docx",
+      "start": "2026-11-18T22:03:46.931Z",
+      "end": "2026-11-18T22:03:47.045Z",
+      "status": 200,
+      "cpu_microseconds": 15240
+    },
+    {
+      "label": "dense-runs.docx",
+      "start": "2026-11-18T22:04:22.009Z",
+      "end": "2026-11-18T22:04:22.286Z",
+      "status": 201,
+      "cpu_microseconds": null
+    }
+  ]
+}

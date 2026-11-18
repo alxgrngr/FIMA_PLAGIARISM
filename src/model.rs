@@ -1,6 +1,7 @@
 //! CPU-only research inference. The bundled model is available only in opt-in research mode.
 use serde::Deserialize;
-use std::collections::{BTreeMap, BTreeSet};
+use std::borrow::Cow;
+use std::collections::{BTreeMap, BTreeSet, HashMap};
 
 #[derive(Deserialize)]
 #[serde(deny_unknown_fields)]
@@ -8,7 +9,7 @@ pub struct Model {
     schema_version: u32,
     status: String,
     tokenizer: String,
-    vocabulary: BTreeMap<String, usize>,
+    vocabulary: HashMap<String, usize>,
     idf: Vec<f64>,
     weights: Vec<f64>,
     bias: f64,
@@ -63,7 +64,14 @@ impl Model {
         if text.chars().count() > crate::MAX_CHARS {
             return Err("Text exceeds size limit");
         }
-        let lower = text.to_lowercase();
+        let lower = if text
+            .bytes()
+            .all(|b| b.is_ascii() && !b.is_ascii_uppercase())
+        {
+            Cow::Borrowed(text)
+        } else {
+            Cow::Owned(text.to_lowercase())
+        };
         let mut counts = BTreeMap::<usize, usize>::new();
         let mut total = 0;
         let mut known = 0;

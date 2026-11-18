@@ -17,6 +17,13 @@ pub struct Analysis {
     pub characters: usize,
     pub lexical_diversity: f64,
 }
+
+/// Nonblank input lines, in the same order as the browser paragraph preview.
+pub fn paragraph_lines(text: &str) -> impl Iterator<Item = &str> {
+    text.split('\n')
+        .map(str::trim)
+        .filter(|line| !line.is_empty())
+}
 pub fn analyze(text: &str) -> Result<Analysis, &'static str> {
     let characters = text.chars().count();
     if characters > MAX_CHARS {
