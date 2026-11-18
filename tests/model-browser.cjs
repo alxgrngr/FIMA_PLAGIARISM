@@ -27,7 +27,7 @@ const fs = require('fs');
  await page.locator('.research input[type=checkbox]').check();
  const combined=await page.getByTestId('research-result').innerText();
  if(!combined.includes((flagged/total*100).toFixed(1)+'%')||!combined.includes(flagged+' / '+total+' kata'))throw Error('Word-weighted aggregation mismatch');
- if(!combined.includes('Tidak dinilai'))throw Error('Missing excluded paragraph');
+ if(!combined.includes('Dilewati: kurang dari 25 kata.'))throw Error('Missing excluded paragraph');
  console.log('PASS: word-weighted aggregation and short-paragraph exclusion');
  await page.locator('#text').fill('Teks pendek.');await page.getByRole('button',{name:'Periksa laporan'}).click();await page.locator('.research input[type=checkbox]').check();await page.getByText('Tidak ada paragraf memenuhi syarat. Tidak ada persentase AI yang dihitung.').waitFor();
  if(errors.length||outbound.length)throw Error(JSON.stringify({errors,outbound}));

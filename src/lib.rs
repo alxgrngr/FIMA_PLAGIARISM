@@ -3,6 +3,17 @@ pub mod model;
 use unicode_normalization::UnicodeNormalization;
 
 pub const MAX_CHARS: usize = 100_000;
+pub const MODEL_PARAGRAPH_WORDS: std::ops::RangeInclusive<usize> = 25..=200;
+
+pub fn paragraph_exclusion(words: usize) -> Option<&'static str> {
+    if words < *MODEL_PARAGRAPH_WORDS.start() {
+        Some("Dilewati: kurang dari 25 kata.")
+    } else if words > *MODEL_PARAGRAPH_WORDS.end() {
+        Some("Dilewati: lebih dari 200 kata.")
+    } else {
+        None
+    }
+}
 #[derive(Debug, Clone, PartialEq)]
 pub struct Paragraph {
     pub start: usize,

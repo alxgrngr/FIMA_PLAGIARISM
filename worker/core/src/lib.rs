@@ -1,4 +1,4 @@
-use nusa_ai_detector::{documents, model::Model, paragraph_lines};
+use nusa_ai_detector::{documents, model::Model, paragraph_lines, MODEL_PARAGRAPH_WORDS};
 use std::sync::OnceLock;
 use unicode_normalization::UnicodeNormalization;
 use wasm_bindgen::prelude::*;
@@ -24,7 +24,7 @@ pub fn assess(name: &str, bytes: &[u8]) -> Result<String, JsValue> {
     for (i, paragraph) in paragraph_lines(&text).enumerate() {
         let words = paragraph.split_whitespace().count();
         total_words += words;
-        if !(25..=200).contains(&words) {
+        if !MODEL_PARAGRAPH_WORDS.contains(&words) {
             segments.push(
                 serde_json::json!({"paragraph":i+1,"words":words,"status":"excluded_length"}),
             );

@@ -20,3 +20,22 @@ Five software unit tests pass. Synthetic fixtures are used solely for algorithm/
 
 ## Actual Indonesian experiment (topic-v1)
 Download the pinned public `train.csv` from `https://huggingface.co/datasets/shouwiku/detectai-indonesian/resolve/7ba07fffc32ec81b0d6e660a1ebfea9ec9400fc0/train.csv` into ignored `datasets/local/detectai.csv`. Review docs/MODEL_CARD.md provenance first. Run `python3 training/prepare_detectai.py` (checks SHA-256), then `python3 training/baseline.py datasets/local/prepared.jsonl --out training/runs/detectai-topic-v1` using a fresh output directory. `python3 training/evaluate_detectai.py` computes locked-test diagnostics against the committed model. These data are not to be committed. This model has real internal test metrics but remains research-only.
+
+## Paragraph candidate v2 on Windows
+
+Use Python 3.12 and PowerShell from the repository root. This experiment needs no GPU or paid API. The pinned corpus used here is public. Read the provenance section of docs/MODEL_CARD.md before using it.
+
+```powershell
+py -3.12 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r training/requirements-candidate.txt
+New-Item -ItemType Directory -Force datasets/local | Out-Null
+curl.exe -fL "https://huggingface.co/datasets/shouwiku/detectai-indonesian/resolve/7ba07fffc32ec81b0d6e660a1ebfea9ec9400fc0/train.csv" -o datasets/local/detectai.csv
+.\.venv\Scripts\python.exe training/prepare_detectai.py
+.\.venv\Scripts\python.exe training/candidate.py datasets/local/prepared.jsonl --out training/runs/paragraph-v2-laptop
+```
+
+The runner splits by topic before extracting paragraphs and discards exact normalized paragraph overlap between splits. It trains TF-IDF logistic regression on paragraphs of 25–200 words, compares seven regularization settings on validation only, and evaluates the selected candidate and live model on the same topic-held-out paragraphs. Split membership is unchanged from topic-v1, so the paragraph results revisit the original source and are an internal comparison. Scores remain uncalibrated.
+
+The trained candidate and its aggregate report are in `models/experimental/`. On 836 held-out paragraphs the candidate caught 401/445 AI-labelled paragraphs versus 358/445 for the live model, while incorrectly flagging 22/391 human-labelled paragraphs versus 16/391. The candidate is more sensitive on this test and more often flagged human paragraphs incorrectly at its chosen threshold. The deployed model is still topic-v1.
+
+To check suitability for Perilaku Organisasi, add `--domain-test datasets/local/praktikum-test.jsonl` and choose a fresh output folder. The file uses the same input fields as above. Use consented, anonymized student text with verified authorship and AI samples from multiple tools answering comparable prompts. Keep each prompt or assignment and related versions together. The optional test file stays local and is evaluated only after training. Use a separate set for any later model tuning. Review false positives on held-out human reports, recall across generators, and the number of paragraphs excluded before choosing a production model.

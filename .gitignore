@@ -9,3 +9,5 @@ __pycache__/
 /worker/node_modules/
 /worker/pkg/
 /worker/core/target/
+
+/.venv/

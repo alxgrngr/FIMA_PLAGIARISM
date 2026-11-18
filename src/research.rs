@@ -1,6 +1,6 @@
 //! Real trained CPU baseline. Research-only, explicitly opted into by the user.
 use leptos::*;
-use nusa_ai_detector::{analyze, model::Model};
+use nusa_ai_detector::{analyze, model::Model, paragraph_exclusion};
 #[component]
 pub fn Research(text: String) -> impl IntoView {
     let (enabled, set_enabled) = create_signal(false);
@@ -24,10 +24,9 @@ fn render_scores(text: &str) -> View {
     let mut flagged = 0;
     let mut rows = Vec::new();
     for (i, p) in analysis.paragraphs.iter().enumerate() {
-        let result = if !(25..=200).contains(&p.words) {
-            Err("Tidak dinilai: perlu 25–200 kata per paragraf (batas riset).")
-        } else {
-            model.infer(&p.normalized)
+        let result = match paragraph_exclusion(p.words) {
+            Some(reason) => Err(reason),
+            None => model.infer(&p.normalized),
         };
         let (label, class) = match result {
             Ok(s) => {

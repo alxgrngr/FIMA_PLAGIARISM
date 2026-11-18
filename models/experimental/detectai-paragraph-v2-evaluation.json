@@ -1,0 +1,74 @@
+{
+  "dataset_sha256": "1c0365e1456f83856cba81a3daec54addc0344096d0a069a5ad70d52ab1b3aba",
+  "baseline_sha256": "1218bb83f288e3b57a86623703e15ae2bef110042b433c8c0ff56e7feaff3609",
+  "sources": [
+    "shouwiku/detectai-indonesian@7ba07fffc32ec81b0d6e660a1ebfea9ec9400fc0"
+  ],
+  "split_seed": 42,
+  "paragraph_sizes": [
+    2587,
+    909,
+    836
+  ],
+  "excluded_duplicate_paragraphs": 0,
+  "selected_C": 30.0,
+  "validation_fpr_limit": 0.05,
+  "candidate_validation": {
+    "n": 909,
+    "tp": 515,
+    "fp": 18,
+    "tn": 350,
+    "fn": 26,
+    "accuracy": 0.9515951595159516,
+    "precision": 0.9662288930581614,
+    "recall": 0.9519408502772643,
+    "f1": 0.9590316573556797,
+    "false_positive_rate": 0.04891304347826087,
+    "false_negative_rate": 0.04805914972273567,
+    "brier": 0.045488485457079876,
+    "threshold": 0.34339895973232265,
+    "eligible_paragraphs": 909,
+    "abstained_human": 0,
+    "abstained_ai": 0
+  },
+  "internal_test": {
+    "live": {
+      "n": 836,
+      "tp": 358,
+      "fp": 16,
+      "tn": 375,
+      "fn": 87,
+      "accuracy": 0.8767942583732058,
+      "precision": 0.9572192513368984,
+      "recall": 0.8044943820224719,
+      "f1": 0.8742368742368742,
+      "false_positive_rate": 0.04092071611253197,
+      "false_negative_rate": 0.19550561797752808,
+      "brier": 0.19923830484298927,
+      "threshold": 0.47677173837318837,
+      "eligible_paragraphs": 836,
+      "abstained_human": 0,
+      "abstained_ai": 0
+    },
+    "candidate": {
+      "n": 836,
+      "tp": 401,
+      "fp": 22,
+      "tn": 369,
+      "fn": 44,
+      "accuracy": 0.9210526315789473,
+      "precision": 0.9479905437352246,
+      "recall": 0.9011235955056179,
+      "f1": 0.923963133640553,
+      "false_positive_rate": 0.056265984654731455,
+      "false_negative_rate": 0.09887640449438202,
+      "brier": 0.06340044603931491,
+      "threshold": 0.34339895973232265,
+      "eligible_paragraphs": 836,
+      "abstained_human": 0,
+      "abstained_ai": 0
+    }
+  },
+  "domain_test": null,
+  "candidate_sha256": "ae21ea8232d23a45aa0324d7517e4e5c33674ce026d3d01d6ed60c78f5f7a2db"
+}

@@ -19,7 +19,7 @@ def tokens(text):
 
 
 def load(path):
-    rows = [json.loads(line) for line in Path(path).read_text().splitlines() if line.strip()]
+    rows = [json.loads(line) for line in Path(path).read_text(encoding="utf-8").splitlines() if line.strip()]
     seen = {}
     for row in rows:
         if not isinstance(row.get('text'), str) or not tokens(row['text']):
