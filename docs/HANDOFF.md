@@ -2,6 +2,10 @@
 
 This is a curated project handoff, not a complete transcript. Read AGENTS.md first, then this file, PROGRESS.md and VERIFIED_RECEIPTS.md. Earlier progress entries describe historical states; use the latest entries for current status.
 
+## Production update — 2026-11-19 WIB
+
+Login and automatic receipts are live at https://fima-plagiarism.fiqihh413.workers.dev/. Earlier statements below about the main site being static or the roster being local describe historical states. The live version was built from the receipt-cpu-optimization branch with the Durable Object gateway and a separate production D1 roster. Browser and API smoke tests with the designated test account and synthetic 10 MiB DOCX passed. See the latest PROGRESS.md entry. Future production deploys should use the ignored private/production.toml and scripts/deploy_verified.sh. The root Wrangler config remains the historical static deployment and must not be used to update the active verified Worker.
+
 ## User requirements
 
 - Indonesian-language AI detector for Perilaku Organisasi practicum reports, Teknik Industri, Universitas Muhammadiyah Malang. Simple industrial-blue design, Rust/Leptos CSR and WASM.
