@@ -1,0 +1,715 @@
+{
+  "worker": "nusa-receipts-staging",
+  "deployed_version": "dc90383a-905a-49e2-a071-c99637275e81",
+  "since": "2026-11-18T22:10:39+00:00",
+  "gateway": {
+    "requests": 44,
+    "errors": 0,
+    "max_group_p99_cpu_microseconds": 2088,
+    "groups": [
+      {
+        "dimensions": {
+          "datetime": "2026-11-18T22:11:24Z",
+          "httpResponseStatus": 200,
+          "status": "success"
+        },
+        "quantiles": {
+          "cpuTimeP50": 1581,
+          "cpuTimeP99": 1581
+        },
+        "sum": {
+          "errors": 0,
+          "requests": 1
+        }
+      },
+      {
+        "dimensions": {
+          "datetime": "2026-11-18T22:10:54Z",
+          "httpResponseStatus": 400,
+          "status": "success"
+        },
+        "quantiles": {
+          "cpuTimeP50": 781,
+          "cpuTimeP99": 781
+        },
+        "sum": {
+          "errors": 0,
+          "requests": 1
+        }
+      },
+      {
+        "dimensions": {
+          "datetime": "2026-11-18T22:10:54Z",
+          "httpResponseStatus": 201,
+          "status": "success"
+        },
+        "quantiles": {
+          "cpuTimeP50": 1685,
+          "cpuTimeP99": 1685
+        },
+        "sum": {
+          "errors": 0,
+          "requests": 1
+        }
+      },
+      {
+        "dimensions": {
+          "datetime": "2026-11-18T22:11:01Z",
+          "httpResponseStatus": 200,
+          "status": "success"
+        },
+        "quantiles": {
+          "cpuTimeP50": 1166,
+          "cpuTimeP99": 1166
+        },
+        "sum": {
+          "errors": 0,
+          "requests": 1
+        }
+      },
+      {
+        "dimensions": {
+          "datetime": "2026-11-18T22:11:22Z",
+          "httpResponseStatus": 201,
+          "status": "success"
+        },
+        "quantiles": {
+          "cpuTimeP50": 891,
+          "cpuTimeP99": 891
+        },
+        "sum": {
+          "errors": 0,
+          "requests": 1
+        }
+      },
+      {
+        "dimensions": {
+          "datetime": "2026-11-18T22:11:10Z",
+          "httpResponseStatus": 201,
+          "status": "success"
+        },
+        "quantiles": {
+          "cpuTimeP50": 1390,
+          "cpuTimeP99": 1390
+        },
+        "sum": {
+          "errors": 0,
+          "requests": 1
+        }
+      },
+      {
+        "dimensions": {
+          "datetime": "2026-11-18T22:10:53Z",
+          "httpResponseStatus": 200,
+          "status": "success"
+        },
+        "quantiles": {
+          "cpuTimeP50": 1146,
+          "cpuTimeP99": 1324
+        },
+        "sum": {
+          "errors": 0,
+          "requests": 2
+        }
+      },
+      {
+        "dimensions": {
+          "datetime": "2026-11-18T22:10:54Z",
+          "httpResponseStatus": 200,
+          "status": "success"
+        },
+        "quantiles": {
+          "cpuTimeP50": 696,
+          "cpuTimeP99": 696
+        },
+        "sum": {
+          "errors": 0,
+          "requests": 1
+        }
+      },
+      {
+        "dimensions": {
+          "datetime": "2026-11-18T22:10:59Z",
+          "httpResponseStatus": 201,
+          "status": "success"
+        },
+        "quantiles": {
+          "cpuTimeP50": 1502,
+          "cpuTimeP99": 1502
+        },
+        "sum": {
+          "errors": 0,
+          "requests": 1
+        }
+      },
+      {
+        "dimensions": {
+          "datetime": "2026-11-18T22:10:54Z",
+          "httpResponseStatus": 401,
+          "status": "success"
+        },
+        "quantiles": {
+          "cpuTimeP50": 894,
+          "cpuTimeP99": 894
+        },
+        "sum": {
+          "errors": 0,
+          "requests": 1
+        }
+      },
+      {
+        "dimensions": {
+          "datetime": "2026-11-18T22:12:25Z",
+          "httpResponseStatus": 201,
+          "status": "success"
+        },
+        "quantiles": {
+          "cpuTimeP50": 510,
+          "cpuTimeP99": 698
+        },
+        "sum": {
+          "errors": 0,
+          "requests": 2
+        }
+      },
+      {
+        "dimensions": {
+          "datetime": "2026-11-18T22:12:20Z",
+          "httpResponseStatus": 200,
+          "status": "success"
+        },
+        "quantiles": {
+          "cpuTimeP50": 883,
+          "cpuTimeP99": 1127
+        },
+        "sum": {
+          "errors": 0,
+          "requests": 2
+        }
+      },
+      {
+        "dimensions": {
+          "datetime": "2026-11-18T22:11:13Z",
+          "httpResponseStatus": 200,
+          "status": "success"
+        },
+        "quantiles": {
+          "cpuTimeP50": 1780,
+          "cpuTimeP99": 1780
+        },
+        "sum": {
+          "errors": 0,
+          "requests": 1
+        }
+      },
+      {
+        "dimensions": {
+          "datetime": "2026-11-18T22:10:55Z",
+          "httpResponseStatus": 200,
+          "status": "success"
+        },
+        "quantiles": {
+          "cpuTimeP50": 736,
+          "cpuTimeP99": 1127
+        },
+        "sum": {
+          "errors": 0,
+          "requests": 2
+        }
+      },
+      {
+        "dimensions": {
+          "datetime": "2026-11-18T22:11:17Z",
+          "httpResponseStatus": 200,
+          "status": "success"
+        },
+        "quantiles": {
+          "cpuTimeP50": 930,
+          "cpuTimeP99": 930
+        },
+        "sum": {
+          "errors": 0,
+          "requests": 1
+        }
+      },
+      {
+        "dimensions": {
+          "datetime": "2026-11-18T22:11:20Z",
+          "httpResponseStatus": 200,
+          "status": "success"
+        },
+        "quantiles": {
+          "cpuTimeP50": 747,
+          "cpuTimeP99": 747
+        },
+        "sum": {
+          "errors": 0,
+          "requests": 1
+        }
+      },
+      {
+        "dimensions": {
+          "datetime": "2026-11-18T22:11:27Z",
+          "httpResponseStatus": 201,
+          "status": "success"
+        },
+        "quantiles": {
+          "cpuTimeP50": 831,
+          "cpuTimeP99": 831
+        },
+        "sum": {
+          "errors": 0,
+          "requests": 1
+        }
+      },
+      {
+        "dimensions": {
+          "datetime": "2026-11-18T22:11:15Z",
+          "httpResponseStatus": 201,
+          "status": "success"
+        },
+        "quantiles": {
+          "cpuTimeP50": 1031,
+          "cpuTimeP99": 1031
+        },
+        "sum": {
+          "errors": 0,
+          "requests": 1
+        }
+      },
+      {
+        "dimensions": {
+          "datetime": "2026-11-18T22:12:23Z",
+          "httpResponseStatus": 201,
+          "status": "success"
+        },
+        "quantiles": {
+          "cpuTimeP50": 651,
+          "cpuTimeP99": 651
+        },
+        "sum": {
+          "errors": 0,
+          "requests": 1
+        }
+      },
+      {
+        "dimensions": {
+          "datetime": "2026-11-18T22:11:28Z",
+          "httpResponseStatus": 200,
+          "status": "success"
+        },
+        "quantiles": {
+          "cpuTimeP50": 1093,
+          "cpuTimeP99": 1093
+        },
+        "sum": {
+          "errors": 0,
+          "requests": 1
+        }
+      },
+      {
+        "dimensions": {
+          "datetime": "2026-11-18T22:11:04Z",
+          "httpResponseStatus": 200,
+          "status": "success"
+        },
+        "quantiles": {
+          "cpuTimeP50": 878,
+          "cpuTimeP99": 878
+        },
+        "sum": {
+          "errors": 0,
+          "requests": 1
+        }
+      },
+      {
+        "dimensions": {
+          "datetime": "2026-11-18T22:10:56Z",
+          "httpResponseStatus": 401,
+          "status": "success"
+        },
+        "quantiles": {
+          "cpuTimeP50": 885,
+          "cpuTimeP99": 885
+        },
+        "sum": {
+          "errors": 0,
+          "requests": 1
+        }
+      },
+      {
+        "dimensions": {
+          "datetime": "2026-11-18T22:11:18Z",
+          "httpResponseStatus": 201,
+          "status": "success"
+        },
+        "quantiles": {
+          "cpuTimeP50": 976,
+          "cpuTimeP99": 976
+        },
+        "sum": {
+          "errors": 0,
+          "requests": 1
+        }
+      },
+      {
+        "dimensions": {
+          "datetime": "2026-11-18T22:12:27Z",
+          "httpResponseStatus": 200,
+          "status": "success"
+        },
+        "quantiles": {
+          "cpuTimeP50": 1036,
+          "cpuTimeP99": 1743
+        },
+        "sum": {
+          "errors": 0,
+          "requests": 3
+        }
+      },
+      {
+        "dimensions": {
+          "datetime": "2026-11-18T22:10:55Z",
+          "httpResponseStatus": 403,
+          "status": "success"
+        },
+        "quantiles": {
+          "cpuTimeP50": 998,
+          "cpuTimeP99": 998
+        },
+        "sum": {
+          "errors": 0,
+          "requests": 1
+        }
+      },
+      {
+        "dimensions": {
+          "datetime": "2026-11-18T22:10:58Z",
+          "httpResponseStatus": 200,
+          "status": "success"
+        },
+        "quantiles": {
+          "cpuTimeP50": 1395,
+          "cpuTimeP99": 1395
+        },
+        "sum": {
+          "errors": 0,
+          "requests": 1
+        }
+      },
+      {
+        "dimensions": {
+          "datetime": "2026-11-18T22:11:35Z",
+          "httpResponseStatus": 200,
+          "status": "success"
+        },
+        "quantiles": {
+          "cpuTimeP50": 777,
+          "cpuTimeP99": 777
+        },
+        "sum": {
+          "errors": 0,
+          "requests": 1
+        }
+      },
+      {
+        "dimensions": {
+          "datetime": "2026-11-18T22:11:31Z",
+          "httpResponseStatus": 200,
+          "status": "success"
+        },
+        "quantiles": {
+          "cpuTimeP50": 754,
+          "cpuTimeP99": 754
+        },
+        "sum": {
+          "errors": 0,
+          "requests": 1
+        }
+      },
+      {
+        "dimensions": {
+          "datetime": "2026-11-18T22:10:53Z",
+          "httpResponseStatus": 401,
+          "status": "success"
+        },
+        "quantiles": {
+          "cpuTimeP50": 2088,
+          "cpuTimeP99": 2088
+        },
+        "sum": {
+          "errors": 0,
+          "requests": 1
+        }
+      },
+      {
+        "dimensions": {
+          "datetime": "2026-11-18T22:11:34Z",
+          "httpResponseStatus": 201,
+          "status": "success"
+        },
+        "quantiles": {
+          "cpuTimeP50": 1245,
+          "cpuTimeP99": 1245
+        },
+        "sum": {
+          "errors": 0,
+          "requests": 1
+        }
+      },
+      {
+        "dimensions": {
+          "datetime": "2026-11-18T22:11:30Z",
+          "httpResponseStatus": 201,
+          "status": "success"
+        },
+        "quantiles": {
+          "cpuTimeP50": 1504,
+          "cpuTimeP99": 1504
+        },
+        "sum": {
+          "errors": 0,
+          "requests": 1
+        }
+      },
+      {
+        "dimensions": {
+          "datetime": "2026-11-18T22:11:25Z",
+          "httpResponseStatus": 200,
+          "status": "success"
+        },
+        "quantiles": {
+          "cpuTimeP50": 797,
+          "cpuTimeP99": 797
+        },
+        "sum": {
+          "errors": 0,
+          "requests": 1
+        }
+      },
+      {
+        "dimensions": {
+          "datetime": "2026-11-18T22:10:56Z",
+          "httpResponseStatus": 200,
+          "status": "success"
+        },
+        "quantiles": {
+          "cpuTimeP50": 914,
+          "cpuTimeP99": 939
+        },
+        "sum": {
+          "errors": 0,
+          "requests": 2
+        }
+      },
+      {
+        "dimensions": {
+          "datetime": "2026-11-18T22:10:55Z",
+          "httpResponseStatus": 201,
+          "status": "success"
+        },
+        "quantiles": {
+          "cpuTimeP50": 1265,
+          "cpuTimeP99": 1265
+        },
+        "sum": {
+          "errors": 0,
+          "requests": 1
+        }
+      },
+      {
+        "dimensions": {
+          "datetime": "2026-11-18T22:11:14Z",
+          "httpResponseStatus": 200,
+          "status": "success"
+        },
+        "quantiles": {
+          "cpuTimeP50": 923,
+          "cpuTimeP99": 923
+        },
+        "sum": {
+          "errors": 0,
+          "requests": 1
+        }
+      },
+      {
+        "dimensions": {
+          "datetime": "2026-11-18T22:12:21Z",
+          "httpResponseStatus": 200,
+          "status": "success"
+        },
+        "quantiles": {
+          "cpuTimeP50": 1092,
+          "cpuTimeP99": 1092
+        },
+        "sum": {
+          "errors": 0,
+          "requests": 1
+        }
+      },
+      {
+        "dimensions": {
+          "datetime": "2026-11-18T22:11:03Z",
+          "httpResponseStatus": 201,
+          "status": "success"
+        },
+        "quantiles": {
+          "cpuTimeP50": 919,
+          "cpuTimeP99": 919
+        },
+        "sum": {
+          "errors": 0,
+          "requests": 1
+        }
+      }
+    ]
+  },
+  "processor": {
+    "worker": "nusa-receipts-staging",
+    "since": "2026-11-18T22:10:39+00:00",
+    "dataset": "durableObjectsInvocationsAdaptiveGroups",
+    "cpu_unit": "microseconds",
+    "groups": [],
+    "limitations": [
+      "Adaptive analytics; groups are not guaranteed to represent individual requests.",
+      "No URL paths; only the Worker dataset includes the HTTP response status.",
+      "Results may lag; up to 1000 groups. Not a load test or automatic deployment approval."
+    ]
+  },
+  "serial_checks": [
+    {
+      "label": "login",
+      "start": "2026-11-18T22:10:58.213Z",
+      "end": "2026-11-18T22:10:58.668Z",
+      "status": 200
+    },
+    {
+      "label": "short.txt",
+      "start": "2026-11-18T22:10:59.822Z",
+      "end": "2026-11-18T22:11:00.428Z",
+      "status": 201
+    },
+    {
+      "label": "verify short.txt",
+      "start": "2026-11-18T22:11:01.585Z",
+      "end": "2026-11-18T22:11:01.955Z",
+      "status": 200
+    },
+    {
+      "label": "long.txt",
+      "start": "2026-11-18T22:11:03.107Z",
+      "end": "2026-11-18T22:11:03.467Z",
+      "status": 201
+    },
+    {
+      "label": "verify long.txt",
+      "start": "2026-11-18T22:11:04.619Z",
+      "end": "2026-11-18T22:11:08.027Z",
+      "status": 200
+    },
+    {
+      "label": "boundary.docx",
+      "start": "2026-11-18T22:11:09.179Z",
+      "end": "2026-11-18T22:11:11.801Z",
+      "status": 201
+    },
+    {
+      "label": "verify boundary.docx",
+      "start": "2026-11-18T22:11:12.952Z",
+      "end": "2026-11-18T22:11:13.312Z",
+      "status": 200
+    },
+    {
+      "label": "login",
+      "start": "2026-11-18T22:11:14.471Z",
+      "end": "2026-11-18T22:11:14.712Z",
+      "status": 200
+    },
+    {
+      "label": "short.txt",
+      "start": "2026-11-18T22:11:15.867Z",
+      "end": "2026-11-18T22:11:16.126Z",
+      "status": 201
+    },
+    {
+      "label": "verify short.txt",
+      "start": "2026-11-18T22:11:17.279Z",
+      "end": "2026-11-18T22:11:17.597Z",
+      "status": 200
+    },
+    {
+      "label": "long.txt",
+      "start": "2026-11-18T22:11:18.748Z",
+      "end": "2026-11-18T22:11:19.032Z",
+      "status": 201
+    },
+    {
+      "label": "verify long.txt",
+      "start": "2026-11-18T22:11:20.185Z",
+      "end": "2026-11-18T22:11:20.364Z",
+      "status": 200
+    },
+    {
+      "label": "boundary.docx",
+      "start": "2026-11-18T22:11:21.515Z",
+      "end": "2026-11-18T22:11:23.452Z",
+      "status": 201
+    },
+    {
+      "label": "verify boundary.docx",
+      "start": "2026-11-18T22:11:24.604Z",
+      "end": "2026-11-18T22:11:24.766Z",
+      "status": 200
+    },
+    {
+      "label": "login",
+      "start": "2026-11-18T22:11:25.930Z",
+      "end": "2026-11-18T22:11:26.163Z",
+      "status": 200
+    },
+    {
+      "label": "short.txt",
+      "start": "2026-11-18T22:11:27.316Z",
+      "end": "2026-11-18T22:11:27.562Z",
+      "status": 201
+    },
+    {
+      "label": "verify short.txt",
+      "start": "2026-11-18T22:11:28.714Z",
+      "end": "2026-11-18T22:11:28.883Z",
+      "status": 200
+    },
+    {
+      "label": "long.txt",
+      "start": "2026-11-18T22:11:30.037Z",
+      "end": "2026-11-18T22:11:30.346Z",
+      "status": 201
+    },
+    {
+      "label": "verify long.txt",
+      "start": "2026-11-18T22:11:31.497Z",
+      "end": "2026-11-18T22:11:31.759Z",
+      "status": 200
+    },
+    {
+      "label": "boundary.docx",
+      "start": "2026-11-18T22:11:32.912Z",
+      "end": "2026-11-18T22:11:34.637Z",
+      "status": 201
+    },
+    {
+      "label": "verify boundary.docx",
+      "start": "2026-11-18T22:11:35.788Z",
+      "end": "2026-11-18T22:11:35.932Z",
+      "status": 200
+    }
+  ],
+  "parallel_check": {
+    "started": "2026-11-18T22:12:21.281Z",
+    "finished": "2026-11-18T22:12:27.208Z",
+    "parallel_uploads": 3,
+    "bytes_each": 10485760,
+    "distinct_signed_records_verified": 3
+  },
+  "limitations": "Synthetic serial tests and three simultaneous uploads. Adaptive analytics may lag. This is not a full-day account-wide quota or 300-user load test."
+}

@@ -29,6 +29,10 @@ This is a curated project handoff, not a complete transcript. Read AGENTS.md fir
 - Session cookies, allowlist, origin checks, issuance/login limits, original-file hashing, server recomputation, HMAC-signed records, owner receipt and masked public verification.
 - Local Rust/Clippy/build, API/browser, synthetic roster tests passed as recorded in PROGRESS.md. Remote staging login/receipt tests passed, including approximately 99k characters and an exactly 10 MiB DOCX. Do not equate functional success with Free-tier feasibility.
 
+## Staging update — 2026-11-19 WIB
+
+The receipt-cpu-optimization branch now includes a SQLite Durable Object gateway. It supersedes the direct Worker processing below and keeps issuance automatic at the website. Synthetic staging passed three simultaneous 10 MiB uploads. The gateway reported 44 requests, zero errors and a maximum group p99 of 2.088 ms. The processor analytics returned no rows at collection time. See the latest PROGRESS.md and benchmark before changing production. The evidence and proposed staged processing below describe the earlier direct Worker design.
+
 ## Current blocker — do not bypass
 
 Cloudflare analytics on 2026-11-17: 17 staging requests, zero errors; CPU median 4.397 ms and p99 72.104 ms. Two HTTP 201 receipt-issuance requests consumed 61.066 and 72.104 ms. These exceed the intended Workers Free 10 ms CPU budget. HTTP 200 groups also reached 37.970 ms, without route attribution. Units verified from GraphQL schema (microseconds). Small adaptive sample, not a load test.

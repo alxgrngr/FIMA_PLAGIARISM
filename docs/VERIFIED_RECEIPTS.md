@@ -47,3 +47,9 @@ Cloudflare API access now works. Staging database/Worker `nusa-receipts-staging`
 
 ### Free-tier gate result
 Remote functional tests now pass, including 10 MiB DOCX issuance. However Cloudflare's actual aggregate CPU metrics include p99 ~72.1ms against the intended 10ms budget (17 requests, zero errors). That does not establish stable Free-tier operation. The production switch remains blocked on CPU engineering/validation rather than credentials or network. See benchmarks/cloudflare-staging-2026-11-17.json. No paid plan activated and no production roster uploaded.
+
+### SQLite Durable Object staging gateway, 2026-11-19 WIB
+
+This replaces the direct Worker processing recommended in the earlier provisioning section. Set `main` to `worker/gateway.js` in the reviewable deployment config. Copy the `durable_objects.bindings` and SQLite `migrations` sections from `worker/wrangler.toml`. The migration tag and class are part of deployment history and should be retained in subsequent deploys. The deploy script checks the entry point, binding, migration, D1 binding and build marker.
+
+The gateway passes original file requests to a fixed set of SQLite Durable Objects. The processor uses the existing D1 receipt ledger and keeps document bytes only in memory while handling the request. Free plan limits for the processor and the public Worker are measured separately. See the latest progress entry and benchmark for staging evidence. Direct Worker CPU overages recorded earlier still apply to the superseded route. Use the account's Free plan and monitor shared Workers, D1 and Durable Objects limits when rolling out.

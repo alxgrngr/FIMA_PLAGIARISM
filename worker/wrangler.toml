@@ -1,5 +1,5 @@
 name = "nusa-receipts-local"
-main = "src.js"
+main = "gateway.js"
 compatibility_date = "2026-11-16"
 compatibility_flags = ["nodejs_compat"]
 workers_dev = true
@@ -15,5 +15,11 @@ database_id = "00000000-0000-0000-0000-000000000000"
 migrations_dir = "migrations"
 [observability]
 enabled = false
+[[durable_objects.bindings]]
+name = "RECEIPT_PROCESSOR"
+class_name = "ReceiptProcessor"
+[[migrations]]
+tag = "receipt-processor-v1"
+new_sqlite_classes = ["ReceiptProcessor"]
 [triggers]
 crons = ["0 * * * *"]
