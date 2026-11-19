@@ -57,3 +57,17 @@ node training/generate_stress.mjs training/runs/llama path/to/weights.gguf "GENE
 ```
 
 Review the generated responses for language, topic and prompt echo before combining them into a single UTF-8 JSONL file. Then rerun the experiment with a fresh output directory and `--ai-stress-test datasets/local/stress-reviewed.jsonl`. Sampled outputs can differ between platforms; keep model hashes, generator versions, prompts and accepted sample IDs with any results. Use `--domain-test datasets/local/praktikum-test.jsonl` to also measure false positives on independently reviewed Bahasa Indonesia reports and AI examples. Related versions must share group IDs, with distinct groups across development and test. The training command does not send reports to a service.
+
+## Private pilot from the three supplied journals
+
+The CPU pipeline `training/journal_pilot.py` fits a compact Rust-compatible research model from the three journal sources alone, with AI samples paired to their topics. The archived Wikipedia/Gemma weights are read only as a comparison. There is no call to a paid service.
+
+- Journal JSONL: one record per article with `text` (one original paragraph per line), `source` (publisher DOI URL) and `group` (DOI). See the earlier journal audit report for the exact paragraph spans selected from each user-supplied PDF. Keep these excerpts under ignored `datasets/local/`.
+- Generated JSONL: use the optional fifth argument to `training/generate_stress.mjs`, a JSON array of `{group,prompt}` objects with article DOI as the group. Generate independently from topic descriptions, without passing the article text into the generators. Review relevance and remove headings or irrelevant sections before fitting.
+- Train with the Python environment documented above.
+
+```powershell
+.\.venv\Scripts\python.exe training/journal_pilot.py datasets/local/journal-pilot/journals.jsonl datasets/local/journal-pilot/generated-reviewed.jsonl --out training/runs/journal-three-pilot
+```
+
+For each evaluation fold, the pipeline holds out one article and all AI text paired with its topic. The final JSON model uses all three documents and the generated examples. Its fold report describes the training procedure, with only three independent groups and no validation on student writing or unseen generators. Keep the output private under ignored `training/runs/`, especially while reuse licensing is unconfirmed for two of the PDFs.
