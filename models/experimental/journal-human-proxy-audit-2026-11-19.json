@@ -1,0 +1,291 @@
+{
+  "method": "Selected discussion and conclusion prose. Exact original paragraph boundaries retained, and line wraps rejoined. Compared fixed saved thresholds on a human-proxy audit; no model fitting or threshold selection.",
+  "poppler_version": "25.03.0",
+  "model_versions": {
+    "live_v1": {
+      "sha256": "1218bb83f288e3b57a86623703e15ae2bef110042b433c8c0ff56e7feaff3609",
+      "threshold": 0.47677173837318837
+    },
+    "paragraph_v2": {
+      "sha256": "ae21ea8232d23a45aa0324d7517e4e5c33674ce026d3d01d6ed60c78f5f7a2db",
+      "threshold": 0.34339895973232265
+    },
+    "word_ngram_v3": {
+      "sha256": "0c43a3b00ed9ecf57227e9739f9b00eba4e11561f56ad2f68139b7142a763986",
+      "threshold": 0.36284127847182956
+    }
+  },
+  "sources": [
+    {
+      "doi": "10.29080/ipr.v4i2.769",
+      "year": 2022,
+      "license": "CC BY-SA 4.0",
+      "printed_pages": "121\u2013122",
+      "pdf_sha256": "0b415bb97aed19401fec7004dc5fa772902a966438cd85d53a42c3d81c9e6164",
+      "pdftotext_layout_excerpt_lines_inclusive": [
+        [
+          [
+            306,
+            312
+          ]
+        ],
+        [
+          [
+            313,
+            318
+          ]
+        ],
+        [
+          [
+            319,
+            323
+          ]
+        ],
+        [
+          [
+            324,
+            325
+          ],
+          [
+            337,
+            342
+          ]
+        ],
+        [
+          [
+            343,
+            352
+          ]
+        ],
+        [
+          [
+            353,
+            360
+          ]
+        ],
+        [
+          [
+            361,
+            367
+          ]
+        ],
+        [
+          [
+            370,
+            375
+          ]
+        ]
+      ],
+      "selected_paragraphs": 8,
+      "eligible_paragraphs": 8,
+      "models": {
+        "live_v1": {
+          "flagged_paragraphs": 0,
+          "abstained_paragraphs": 0,
+          "flagged_words": 0,
+          "scored_words": 620
+        },
+        "paragraph_v2": {
+          "flagged_paragraphs": 0,
+          "abstained_paragraphs": 0,
+          "flagged_words": 0,
+          "scored_words": 620
+        },
+        "word_ngram_v3": {
+          "flagged_paragraphs": 1,
+          "abstained_paragraphs": 0,
+          "flagged_words": 69,
+          "scored_words": 620
+        }
+      }
+    },
+    {
+      "doi": "10.12962/j26151847.v3i2.6007",
+      "year": 2019,
+      "license": null,
+      "printed_pages": "126\u2013129",
+      "pdf_sha256": "05975326b75ca5f3493678d2f16019381d8c3236366aa24969badba0147b831b",
+      "pdftotext_layout_excerpt_lines_inclusive": [
+        [
+          [
+            373,
+            381
+          ]
+        ],
+        [
+          [
+            382,
+            390
+          ]
+        ],
+        [
+          [
+            391,
+            400
+          ]
+        ],
+        [
+          [
+            402,
+            405
+          ]
+        ],
+        [
+          [
+            406,
+            407
+          ],
+          [
+            414,
+            417
+          ]
+        ],
+        [
+          [
+            418,
+            428
+          ]
+        ],
+        [
+          [
+            429,
+            445
+          ]
+        ],
+        [
+          [
+            447,
+            455
+          ]
+        ],
+        [
+          [
+            456,
+            462
+          ],
+          [
+            469,
+            473
+          ]
+        ],
+        [
+          [
+            474,
+            483
+          ]
+        ],
+        [
+          [
+            485,
+            492
+          ]
+        ],
+        [
+          [
+            493,
+            498
+          ]
+        ],
+        [
+          [
+            507,
+            509
+          ]
+        ],
+        [
+          [
+            510,
+            516
+          ]
+        ],
+        [
+          [
+            524,
+            528
+          ]
+        ]
+      ],
+      "selected_paragraphs": 15,
+      "eligible_paragraphs": 14,
+      "models": {
+        "live_v1": {
+          "flagged_paragraphs": 0,
+          "abstained_paragraphs": 0,
+          "flagged_words": 0,
+          "scored_words": 1311
+        },
+        "paragraph_v2": {
+          "flagged_paragraphs": 0,
+          "abstained_paragraphs": 0,
+          "flagged_words": 0,
+          "scored_words": 1311
+        },
+        "word_ngram_v3": {
+          "flagged_paragraphs": 0,
+          "abstained_paragraphs": 0,
+          "flagged_words": 0,
+          "scored_words": 1311
+        }
+      }
+    },
+    {
+      "doi": "10.33489/mibj.v18i2.244",
+      "year": 2020,
+      "license": null,
+      "printed_pages": "45\u201346",
+      "pdf_sha256": "71b10f99950c2be8f267066ce0b9c8e4ca1bfa327bd80e4330941d8224eb57dc",
+      "pdftotext_layout_excerpt_lines_inclusive": [
+        [
+          [
+            574,
+            590
+          ]
+        ],
+        [
+          [
+            591,
+            601
+          ],
+          [
+            607,
+            609
+          ]
+        ],
+        [
+          [
+            612,
+            621
+          ]
+        ]
+      ],
+      "selected_paragraphs": 3,
+      "eligible_paragraphs": 3,
+      "models": {
+        "live_v1": {
+          "flagged_paragraphs": 0,
+          "abstained_paragraphs": 0,
+          "flagged_words": 0,
+          "scored_words": 396
+        },
+        "paragraph_v2": {
+          "flagged_paragraphs": 0,
+          "abstained_paragraphs": 0,
+          "flagged_words": 0,
+          "scored_words": 396
+        },
+        "word_ngram_v3": {
+          "flagged_paragraphs": 0,
+          "abstained_paragraphs": 0,
+          "flagged_words": 0,
+          "scored_words": 396
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "Only three related articles; paragraphs are not independent documents.",
+    "Publication is a human-authorship proxy. Authorship was not independently authenticated.",
+    "No AI samples are included. This audit does not measure sensitivity or population false-positive rate.",
+    "License null means no suitable license was established from the PDF. Used only for inspection and private evaluation; excluded from training."
+  ]
+}

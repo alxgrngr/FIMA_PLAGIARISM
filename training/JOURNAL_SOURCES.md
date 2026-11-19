@@ -43,3 +43,13 @@ Use only prose from the discussion and conclusion; drop quotations, tables, auth
 - Article discovery: [Garuda-derived metadata snapshot](https://huggingface.co/datasets/JSpergel/Garuda_Scrape/tree/25fbe238aedfae50bbab6e49b297f560e2edc8e9). Scanned 100 metadata files covering 8,851 records. A title-keyword scan found 113 records before language, age, licensing or relevance review.
 - Journal-level license discovery: [DOAJ CSV derivative at pinned Git revision](https://github.com/ikhwan-arief/doaj/blob/3dec2aa7b3b8e8927c612bb672ca7df8500623cc/docs/data/journals.json), fetched from the [official DOAJ CSV](https://doaj.org/csv) at 2026-11-18 18:42 UTC. The CC0 metadata terms concern the index itself; see each journal or article for the rights to the text.
 - Publisher sites and the direct DOAJ/Crossref endpoints were blocked by the managed outbound network. No claim is made that any shortlisted article PDF was fetched here.
+
+## Three supplied PDFs, checked on 2026-11-19 WIB
+
+| Article | Issue date verified in PDF | License evidence in PDF |
+| --- | --- | --- |
+| [Total Quality Management and employee performance](https://doi.org/10.12962/j26151847.v3i2.6007) | September 2019 | No explicit reuse license located |
+| [Leadership and teamwork aboard ships](https://doi.org/10.33489/mibj.v18i2.244) | July 2020 | Copyright notice present; no explicit reuse license located |
+| [Self-regulation and organizational commitment](https://doi.org/10.29080/ipr.v4i2.769) | July 2022 | CC BY-SA 4.0 printed in the PDF footer |
+
+Kept all three as a small audit of likely human academic prose. Among 26 selected discussion and conclusion paragraphs, 25 met the 25–200 word filter. The current model and paragraph-v2 each flagged 0/25; word-ngram-v3 flagged 1/25, from the 2022 article. Prepared text was checked for exact overlap with the prior development corpus and kept private. These results concern only three articles, with no AI comparison samples in this audit. No new fitting or model selection was performed. See [aggregate evidence](../models/experimental/journal-human-proxy-audit-2026-11-19.json).
