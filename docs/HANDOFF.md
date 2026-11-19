@@ -6,6 +6,10 @@ This is a curated project handoff, not a complete transcript. Read AGENTS.md fir
 
 Login and automatic receipts are live at https://fima-plagiarism.fiqihh413.workers.dev/. Earlier statements below about the main site being static or the roster being local describe historical states. The live version was built from the receipt-cpu-optimization branch with the Durable Object gateway and a separate production D1 roster. Browser and API smoke tests with the designated test account and synthetic 10 MiB DOCX passed. See the latest PROGRESS.md entry. Future production deploys should use the ignored private/production.toml and scripts/deploy_verified.sh. The root Wrangler config remains the historical static deployment and must not be used to update the active verified Worker.
 
+## Active model update — 2026-11-19 WIB
+
+The live site now uses `journal-pilot-v1` in both browser and server for new reports. Build the verified app with `NUSA_MODEL_PROFILE=journal-pilot-v1` and the private trained artifact described in VERIFIED_RECEIPTS.md. The staged and production parity/receipt checks passed. Earlier descriptions below refer to the former model or static prototype.
+
 ## User requirements
 
 - Indonesian-language AI detector for Perilaku Organisasi practicum reports, Teknik Industri, Universitas Muhammadiyah Malang. Simple industrial-blue design, Rust/Leptos CSR and WASM.

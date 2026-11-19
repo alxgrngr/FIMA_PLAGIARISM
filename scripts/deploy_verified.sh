@@ -6,8 +6,9 @@ cd "$(dirname "$0")/.."
 : "${CLOUDFLARE_API_TOKEN:?Set Cloudflare API token securely}"
 : "${NUSA_VERIFIED_CONFIG:?Path to reviewed private Worker config with actual D1 binding}"
 : "${NUSA_FREE_CPU_VALIDATED:?Record deployed Free-tier CPU validation before production switch}"
+: "${NUSA_MODEL_PROFILE:?Select the model profile used to build the verified artifacts}"
 test "$NUSA_FREE_CPU_VALIDATED" = "yes"
-python3 - "$NUSA_VERIFIED_CONFIG" <<'PY'
+python3 - "$NUSA_VERIFIED_CONFIG" "$NUSA_MODEL_PROFILE" <<'PY'
 import sys,tomllib
 from pathlib import Path
 p=Path(sys.argv[1]);d=tomllib.loads(p.read_text());db=d['d1_databases'][0]
@@ -17,6 +18,6 @@ assert any(b['name'] == 'RECEIPT_PROCESSOR' and b['class_name'] == 'ReceiptProce
            and 'script_name' not in b for b in d['durable_objects']['bindings']), 'Bind the local ReceiptProcessor class'
 assert any('ReceiptProcessor' in m.get('new_sqlite_classes', [])
            for m in d['migrations']), 'Include the SQLite Durable Object migration'
-assert Path('dist/_verified-build').read_text().strip()=='verified-receipts-v1','Build verified artifacts first'
+assert Path('dist/_verified-build').read_text().splitlines() == ['verified-receipts-v1', sys.argv[2]], +    'Build verified artifacts with the same NUSA_MODEL_PROFILE first'
 PY
 npm exec --prefix worker -- wrangler deploy --config "$NUSA_VERIFIED_CONFIG"

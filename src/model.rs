@@ -3,6 +3,8 @@ use serde::Deserialize;
 use std::borrow::Cow;
 use std::collections::{BTreeMap, BTreeSet, HashMap};
 
+pub const BUNDLED_MODEL_ID: &str = env!("NUSA_BUNDLED_MODEL_ID");
+
 #[derive(Deserialize)]
 #[serde(deny_unknown_fields)]
 pub struct Model {
@@ -24,6 +26,17 @@ pub struct Score {
     pub vocabulary_coverage: f64,
 }
 impl Model {
+    pub fn bundled() -> Result<Self, &'static str> {
+        Self::from_json(include_bytes!(concat!(
+            env!("OUT_DIR"),
+            "/bundled-model.json"
+        )))
+    }
+
+    pub fn threshold(&self) -> f64 {
+        self.threshold
+    }
+
     pub fn from_json(bytes: &[u8]) -> Result<Self, &'static str> {
         if bytes.len() > 2_000_000 {
             return Err("Model exceeds size limit");

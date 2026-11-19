@@ -1,11 +1,15 @@
-use nusa_ai_detector::{documents, model::Model, paragraph_lines, MODEL_PARAGRAPH_WORDS};
+use nusa_ai_detector::{
+    documents,
+    model::{Model, BUNDLED_MODEL_ID},
+    paragraph_lines, MODEL_PARAGRAPH_WORDS,
+};
 use std::sync::OnceLock;
 use unicode_normalization::UnicodeNormalization;
 use wasm_bindgen::prelude::*;
 static MODEL: OnceLock<Result<Model, &'static str>> = OnceLock::new();
 fn model() -> Result<&'static Model, JsValue> {
     MODEL
-        .get_or_init(|| Model::from_json(include_bytes!("../../../models/detectai-topic-v1.json")))
+        .get_or_init(Model::bundled)
         .as_ref()
         .map_err(|e| JsValue::from_str(e))
 }
@@ -53,5 +57,5 @@ pub fn assess(name: &str, bytes: &[u8]) -> Result<String, JsValue> {
             "Tidak ada paragraf yang dapat dinilai. Gunakan 25–200 kata per paragraf.",
         ));
     }
-    Ok(serde_json::json!({"model":"detectai-topic-v1","threshold":0.47677173837318837_f64,"status":"research_only","total_words":total_words,"paragraphs":segments.len(),"eligible_words":eligible,"flagged_words":flagged,"percentage":flagged as f64/eligible as f64*100.,"excluded_words":total_words-eligible,"segments":segments}).to_string())
+    Ok(serde_json::json!({"model":BUNDLED_MODEL_ID,"threshold":model.threshold(),"status":"research_only","total_words":total_words,"paragraphs":segments.len(),"eligible_words":eligible,"flagged_words":flagged,"percentage":flagged as f64/eligible as f64*100.,"excluded_words":total_words-eligible,"segments":segments}).to_string())
 }
